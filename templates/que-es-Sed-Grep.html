@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Comandos Sed y Grep {% endblock %}
+
+
+{% block main %}
+<h1>El comando <code>grep</code></h1>
+    <p>Sirve para buscar palabras en un archivo, así como patrones de palabras en archivos. Se usa de la siguiente manera:</p>
+    <ul>
+        <li>Buscar una palabra: <code>grep "Hola" ejemplo.txt</code></li>
+        <li>Buscar una frase en un archivo: <code>grep "Hola mundo" ejemplo.txt</code></li>
+        <li>Buscar múltiples palabras: <code>grep búsqueda1 archivo | grep búsqueda2 archivo</code></li>
+        <li>Buscar una palabra en un conjunto de archivos: <code>grep -l palabra_a_buscar ./*</code></li>
+    </ul>
+    <p>El parámetro <code>-c</code> se utiliza para contar.</p>
+    
+    <h1>El comando <code>sed</code></h1>
+    <p>Se utiliza para reemplazar palabras de un archivo. Se usa de la siguiente manera:</p>
+    <ul>
+        <li><code>sed -i 's/old-text/new-text/g' input.txt</code></li>
+    </ul>
+    <p>Donde:</p>
+    <ul>
+        <li><code>-i</code>: Indica hacer un update en el archivo</li>
+        <li><code>s</code>: Indica sustituir las palabras</li>
+        <li><code>g</code>: Indica hacerlo en forma global</li>
+    </ul>
+{% endblock %}

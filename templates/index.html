@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block title %}Introducción al Desarrollo de Software {% endblock %}
+
+
+{% block main %}
+    <ul>
+        <li class="li-principal">Clase 1: Consola Linux / Bash / Scripts</li>
+        <ul>
+            <li><a href="   {{ url_for('page_procesamiento_de_archivos') }}   ">Cómo procesar archivos desde la consola de Linux</a></li>
+            <li><a href="{{ url_for('page_que_es_un_script')}}">Qué es un Script</a></li>
+            <li><a href="{{ url_for('page_variables_globales_y_locales')}}">Qué son las Variables Locales y Globales</a></li>
+        </ul>
+        <li class="li-principal">Clase 2: Bash / Ejercicios / Comandos Usados</li>
+        <ul>
+            <li><a href="{{ url_for('page_comandos_comunmente_utilizados')}}">Comandos Usados</a></li>
+        </ul>
+        <li class="li-principal">Clase 3: Estructuras Básicas / Comandos Grep-Sed / Expresiones Regulares</li>
+        <ul>
+            <li><a href="{{ url_for('page_comparar_condicionales_bash')}}">Cómo comparar condicionales</a></li>
+            <li><a href="{{ url_for('page_diferencias_entre_while_y_until')}}">Diferencias entre el While y el Until</a></li>
+            <li><a href="{{ url_for('page_estructura_del_case_en_bash')}}">Estructura del Case</a></li>
+            <li><a href="{{ url_for('page_sed_y_grep')}}">Comandos Grep-Sed</a></li>
+            <li><a href="{{ url_for('page_introduccion_a_las_expresiones_regulares')}}">Expresiones Regulares</a></li>
+            <li><a href="{{ url_for('page_pipeline')}}">Qué es un Pipeline (Ejemplo)</a></li>
+            <li><a href="{{ url_for('page_operadores_de_redireccion_en_bash')}}">Operadores de Redirección (Ejemplo)</a></li>
+        </ul>
+        <li class="li-principal">Clase 4: Entornos Virtuales / Introducción al Desarrollo Web y a Flask</li>
+        <ul>
+            <li><a href="{{ url_for('page_entornos_virtuales')}}">Entornos Virtuales</a></li>
+            <li><a href="{{ url_for('page_introduccion_a_flask')}}">Flask</a></li>
+            <li><a href="{{ url_for('page_introduccion_al_desarrollo_web')}}">Introducción al Desarrollo Web</a></li>
+        </ul>
+        <li class="li-principal">Clase 5: Flask / Ejercicios</li>
+        <ul>
+            <li><a href="{{ url_for('page_flask')}}">Cómo empezar con Flask</a></li>
+        </ul>
+        <li class="li-principal">Clase 6: Desarrollo Web: HTML y CSS / Ejercicios</li>
+        <ul>
+            <li><a href="{{ url_for('page_introduccion_a_html')}}">HTML</a></li>
+            <li><a href="{{ url_for('page_introduccion_a_css')}}">CSS</a></li>
+        </ul>
+        <li class="li-principal">Clase 7: JavaScript / Ejercicios</li>
+        <ul>
+            <li><a href="{{ url_for('page_introduccion_a_javascript')}}">JavaScript</a></li>
+        </ul>
+        <li class="li-principal">Clase 8: Cómo Integrar Flask / Ejercicios con la página de Coffee</li>
+        <ul>
+            <li><a href="{{ url_for('page_como_usar_ciclos_en_flask')}}">Uso de Ciclos en Flask</a></li>
+            <li><a href="{{ url_for('page_formularios_en_flask')}}">Formularios en Flask</a></li>
+            <li><a href="{{ url_for('page_errorHandlers_en_flask')}}">Cómo definir ErrorHandler en Flask (Ver Ejercicio)</a></li>
+            <li><a href="{{ url_for('page_como_poner_y_modificar_links_en_flask')}}">Modificación de URLs-Links en Flask</a></li>
+            <li><a href="{{ url_for('page_blocks_en_flask')}}">Cómo reutilizar código con Flask: Blocks</a></li>
+        </ul>
+        <li class="li-principal">Clase 9: Métodos de Desarrollo de Software: TDD / Cómo hacer Test</li>
+        <ul>
+            <li><a href="{{ url_for('page_introduccion_a_tdd')}}">Cómo aplicar TDD</a></li>
+            <li><a href="{{ url_for('page_como_hacer_test_en_python')}}">Cómo hacer Test usando Python</a></li>
+        </ul>
+        <li class="li-principal">Clase 10: Debugging</li>
+        <ul>
+            <li><a href="{{ url_for('page_bugs')}}">Qué son los Bugs</a></li>
+            <li><a href="{{ url_for('page_como_usar_gdb')}}">Cómo usar GDB</a></li>
+        </ul>
+        <li class="li-principal">Clase 11: Proyectos / Scrum / Kanban</li>
+        <ul>
+            <li><a href="{{ url_for('page_proyectos')}}">Qué es un Proyecto</a></li>
+            <li><a href="{{ url_for('page_introduccion_a_scrum')}}">Scrum</a></li>
+            <li><a href="{{ url_for('page_como_implementar_kanban')}}">Kanban</a></li>
+        </ul>
+    </ul>
+{% endblock %}
+
+{% block extra %}
+    <form action="{{'form_feedback'}}" id="form_feedback" method="post">
+            <div class="datos-person">
+                    <label for="name">Nombre/s</label>
+                    <input type="text" id="name" name="name">
+                    <label for="lastname">Apellido/s</label>
+                    <input type="text" id="lastname" name="lastname">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email">
+            </div>
+            <div class="datos-text">
+                <label for="feedback">Dejanos tu feedback</label>
+                <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+                <button type="submit" name="submit">Enviar</button>
+            </div>
+            
+    </form>
+{% endblock %}

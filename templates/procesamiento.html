@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Como Procesar Archivos {% endblock %}
+
+
+{% block main %}
+<h1>Comandos de Procesamiento de Texto màs usados:</h1>
+    <ul>
+        {% for item in dic_comados %}
+            <li>
+                <code>{{ item }}</code>
+                <p>{{ dic_comados[item] }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for comment in comments %}
+            <li>{comment}</li>
+        {% endfor %}
+    </ul>
+    
+{% endblock %}

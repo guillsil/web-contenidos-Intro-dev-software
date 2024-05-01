@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Operadores de Redireccion {% endblock %}
+
+
+{% block main %}
+<h1>Operadores de Redireccion</h1>
+    <p>Los operadores de redireccion se usan para almacenar la salida de algún comando en un archivo. Por ejemplo, para listar los repositorios instalados en mi sistema de Arch Linux, debo ingresar el comando <code>pacman -Qqe</code>. Si quiero guardar la salida en un archivo, debo utilizar el operador de redireccion <code>&gt;</code> seguido del nombre del archivo en el cual se guardará la salida. Por ejemplo:</p>
+    <pre><code>pacman -Qqe &gt; pkglist.txt</code></pre>
+    <p>Importante: el operador <code>&gt;</code> reescribe el archivo, mientras que el operador <code>&gt;&gt;</code> agrega al final del archivo.</p>
+    <p>Así como existen los operadores de redireccion de salida, también existen los de entrada, representados por el operador <code>&lt;</code>. Por ejemplo:</p>
+    <pre><code>sort &lt; milista.txt</code></pre>
+    <p>Este comando ordena el archivo <code>milista.txt</code> y lo muestra por pantalla.</p>
+{% endblock %}

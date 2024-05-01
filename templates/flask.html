@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Flask {% endblock %}
+
+
+{% block main %}
+<h1>Flask - Servidor</h1>
+    <p>Este código nos permite levantar el servidor de nuestro sitio. Por medio del parámetro <code>debug</code> podremos ver los cambios en tiempo real.</p>
+
+    <h1>Flask - Templates y Jinja</h1>
+    <p>Flask nos permite utilizar y renderizar templates (básicamente archivos HTML que sirven de base a lo que se quiera mostrar). Para esto es necesario cargar los archivos HTML necesarios a la carpeta <code>templates</code> dentro del proyecto, e importar la función <code>render_template</code>. A partir de esta función también es posible pasar datos para que se rendericen.</p>
+    <p>Jinja nos permite agregar funcionalidad a estos templates, haciendo que puedan integrar data desde el template dinámicamente.</p>
+
+    <h1>Flask - Routing</h1>
+    <p>Con Flask es sencillo definir el enrutamiento de distintas páginas por medio de decoradores de Python que definan la ruta.</p>
+    <pre><code>@app.route('/')
+def index():
+    return "Hola mundo"
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')</code></pre>
+{% endblock %}

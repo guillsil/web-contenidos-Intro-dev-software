@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Flask {% endblock %}
+
+
+{% block main %}
+<h1>Flask</h1>
+	<p>
+		Flask es un framework minimalista web muy popular que deja casi todas las decisiones de diseño y arquitectura en manos del desarrollador.
+	</p>
+	<h3>Para trabajar con distintos proyectos es necesario crear un ambiente virtual (virtual environment), esto permitirá que no hayan incompatibilidades entre diferentes versiones de dependencias instaladas entre un proyecto y otro.</h3>
+	<ul>
+		<li>pipenv</li>
+	</ul>
+	<h1>Creando un proyecto Flask</h1>
+	<ol>
+		<li>Crear un directorio donde usaremos el proyecto: <code>mkdir mi_proyecto</code></li>
+		<li>Acceder al directorio: <code>cd mi_proyecto</code></li>
+		<li>Ingresar a Visual Studio Code: <code>code .</code> (crear el archivo app.py y un directorio .venv)</li>
+		<li>Crear el ambiente virtual: <code>pipenv install flask</code></li>
+		<li>Activamos el proyecto: <code>pipenv shell</code></li>
+		<li>Continuamos configurando el proyecto dentro del archivo app.py</li>
+	</ol>
+	<h1>Templates :: Variables y estructuras</h1>
+	<p>
+		Dentro de un template, además de tener código HTML, también podremos incorporar en forma dinámica variables y estructuras tipo if o for, entre muchas cosas más.
+	</p>
+	<h1>Variables</h1>
+	<p>
+		Se incorporarán en forma dinámica su valor cuando las llamemos: <code>{{ nombre_variable }}</code>
+	</p>
+	<h1>Estructuras If</h1>
+	<p>
+		Las mismas estarán dentro de <code>{% if user %}</code> y <code>{% endif %}</code>. Ejemplo:
+	</p>
+	<img src="{{ url_for('static', filename='if-flask.png')}}" alt="">
+	<h1>Estructuras for</h1>
+	<p>
+		Las mismas estarán dentro de <code>{% for comment in comments %}</code> y <code>{% endfor %}</code>. Ejemplo:
+	</p>
+
+	<img src="{{ url_for('static', filename='for-flask.png')}}" alt="">
+
+	<h1>Links dentro de los templates</h1>
+	<p>
+		Los links dentro de los templates se recomienda que se use el método <code>url_for()</code>, de esta forma evitaremos posibles problemas o roturas de nuestro código. Los links pueden ser estáticos o dinámicos. Ejemplos:
+	</p>
+	<ul>
+		<li><code>url_for('index', _external=True)</code> ⇒ <a href="http://localhost:5000/">http://localhost:5000/</a> (la opción <code>_external=True</code> hace que se escriba la dirección absoluta)</li>
+		<li><code>url_for('user', name='john', _external=True)</code> ⇒ <a href="http://localhost:5000/user/john">http://localhost:5000/user/john</a></li>
+	</ul>
+	<h1>Pongamos en marcha el proyecto</h1>
+	<p>
+		Crearemos un pequeño sitio web y veremos:
+	</p>
+	<ul>
+		<li>Carpetas/directorios necesarios</li>
+		<li>Exports para arrancar el proyecto</li>
+		<li>Funciones principales para iniciar el proyecto</li>
+		<li>Cómo enviar variables desde el código Python al frontend y viceversa (GET y POST)</li>
+		<li>Variable session (stored in the server)</li>
+	</ul>
+	<h1>Para pasar la aplicación a Debug</h1>
+    <p>Deberán setear la variable de entorno de Linux de la siguiente manera:</p>
+    <code>export FLASK_DEBUG=1</code>
+	<h1>Para setear el nombre de la aplicación por donde se ejecuta el código</h1>
+    <p>Deberán setear la variable de entorno de Linux de la siguiente manera:</p>
+    <code>export FLASK_APP=app.py</code>
+{% endblock %}

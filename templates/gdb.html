@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}GDB {% endblock %}
+
+
+{% block main %}
+<h1>GDB:</h1>
+    <p>
+        Para inicial en C debemos primero compilar el programa con el flag <code>--debug</code>.<br>
+        <code>gcc &lt;file.c&gt; --debug -o &lt;nombre programa&gt;</code>
+    </p>
+    <p>
+        Luego podemos iniciar la versión con interfaz de gdb con<br>
+        <code>gdb -tui &lt;nombre programa&gt; &lt;argumentos&gt;</code>
+    </p>
+    <p>
+        Luego tocamos la tecla ‘c’ para continuar hacia el inicio del proceso
+    </p>
+    <p>
+        Los argumentos también pueden setearse luego
+    </p>
+
+    <h2>Breakpoint</h2>
+    <p>
+        Un breakpoint o punto de parada sirve para que al debuggear el debugger detenga la ejecución en la línea donde colocamos el breakpoint.
+    </p>
+    <p>
+        Agregar un breakpoint en la linea de codigo indicada<br>
+        <code>Comando: b &lt;número de la línea de código&gt;</code>
+    </p>
+    <p>
+        Agregar un breakpoint en la primera linea de codigo de la función<br>
+        <code>Comando: b &lt;nombre de la función&gt;</code>
+    </p>
+
+    <h2>Breakpoint condicional</h2>
+    <p>
+        Es un breakpoint que tiene asociada una condición. El programa se detendrá en esa línea si y sólo si se cumple la condición asociada.
+    </p>
+    <p>
+        Cada breakpoint tiene asociado un “id” y ese “id” es el que debe usarse.<br>
+        <code>Comando: b main</code><br>
+        output: Breakpoint 1 at 0x8048508: file ejemplo.c, line 48.
+    </p>
+    <p>
+        <code>Comando: condition &lt;id del breakpoint&gt; &lt;condición&gt;</code><br>
+        Ejemplo: condition 1 fecha == 1012025
+    </p>
+
+    <h2>Comandos: Continue</h2>
+    <p>
+        Este comando permite continuar con la ejecución hasta el siguiente breakpoint o hasta el fin del programa.<br>
+        <code>Comando: continue | c</code>
+    </p>
+
+    <h2>Comandos: Next</h2>
+    <p>
+        Permite avanzar a la línea inmediatamente siguiente o si existe algún breakpoint intermedio, se detiene en él.<br>
+        <code>Comando: next | n</code>
+    </p>
+
+    <h2>Comandos: Step into</h2>
+    <p>
+        Permite ingresar a la función de la siguiente función a ser llamada. Nos da la posibilidad de examinar el contenido de una función sin necesidad de agregar un breakpoint interno y poder ver los valores en el scope de esta función.
+    </p>
+    <p>
+        <code>Comando: step | s</code><br>
+        En lo más bajo: <code>stepi | si</code> permite avanzar una única instrucción a nivel máquina.
+    </p>
+
+    <h2>Comandos: Step Out</h2>
+    <p>
+        Sale de la función actual hacia la función que la llamó.<br>
+        <code>Comando: finish</code><br>
+        Si en el flujo de ejecución existe un endpoint se detendrá en él.
+    </p>
+
+    <h2>Información de variables</h2>
+    <p>
+        Permite observar el contenido en ese instante de ejecución de las variables.<br>
+        <code>Comando: print | p &lt;nombre de la variable&gt;</code>
+    </p>
+    <p>
+        También se le puede dar “seguimiento” a una variable y cada vez que es usada podemos hacer que el programa se detenga.<br>
+        <code>Comando: watch &lt;nombre de la variable&gt;</code>
+    </p>
+
+    <h2>Seteo de variables</h2>
+    <p>
+        Permite cambiar el valor de las variables en tiempo de ejecución pudiendo así llegar a casos bordes o permitiendo hacer análisis del comportamiento del programa en ese contexto.<br>
+        <code>Comando: set &lt;nombre de la variable&gt; = &lt;valor&gt;</code>
+    </p>
+
+    <h2>Stack trace</h2>
+    <p>
+        Muestra la pila de ejecución del programa en ese momento. Nos permite observar en qué función estamos, quién y dónde se llamó a esa función.<br>
+        Un stack trace es un informe de los elementos activos en la pila de ejecución en un momento determinado durante la ejecución de un programa.<br>
+        <code>Comando: backtrace | bt | backtrace full</code>
+    </p>
+{% endblock %}

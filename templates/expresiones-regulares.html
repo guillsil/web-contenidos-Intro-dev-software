@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Expresiones Regulares {% endblock %}
+
+
+{% block main %}
+<h1>Las expresiones regulares (regex)</h1>
+    <ul>
+        <li>Las expresiones regulares son secuencias de caracteres que definen un patrón de búsqueda.</li>
+        <li>Se utilizan en operaciones de búsqueda, coincidencia, validación y manipulación de texto.</li>
+        <li>Son compatibles con la mayoría de los lenguajes de programación y herramientas de línea de comandos.</li>
+    </ul>
+
+    <h2>2. Expresiones regulares básicas:</h2>
+    <ul>
+        <li><code>.</code>: Coincide con cualquier carácter excepto el salto de línea.</li>
+        <li><code>^</code>: Coincide con el inicio de una línea.</li>
+        <li><code>$</code>: Coincide con el final de una línea.</li>
+        <li><code>[ ]</code>: Coincide con un conjunto de caracteres. Por ejemplo, <code>[abc]</code> coincide con cualquier carácter 'a', 'b' o 'c'.</li>
+        <li><code>[^ ]</code>: Coincide con cualquier carácter que no esté en el conjunto. Por ejemplo, <code>[^abc]</code> coincide con cualquier carácter excepto 'a', 'b' o 'c'.</li>
+        <li><code>*</code>: Coincide con cero o más repeticiones del elemento anterior. Por ejemplo, <code>a*</code> coincide con cero o más 'a'.</li>
+        <li><code>+</code>: Coincide con una o más repeticiones del elemento anterior. Por ejemplo, <code>a+</code> coincide con una o más 'a'.</li>
+        <li><code>?</code>: Coincide con cero o una repetición del elemento anterior. Por ejemplo, <code>a?</code> coincide con cero o una 'a'.</li>
+        <li><code>\</code>: Escapa un carácter especial. Por ejemplo, <code>\.</code> coincide con un punto literal.</li>
+    </ul>
+
+    <h2>3. Expresión regular más común:</h2>
+    <p><code>.*</code>: Coincide con cualquier cadena de caracteres de longitud cero o más. Es decir, coincide con cualquier cosa.</p>
+    <p>Esta expresión regular es extremadamente útil para buscar patrones en texto donde se desconoce la longitud o los caracteres exactos entre dos puntos.</p>
+
+    <h2>Tipos:</h2>
+    <ul>
+        <li>BRE (Basic Regular Expression)</li>
+        <li>ERE (Extended Regular Expression) - La más usada</li>
+        <li>PCRE (Perl Compatible Regular Expression)</li>
+    </ul>
+
+    <h2>Ejemplos:</h2>
+    <ol>
+        <li>¿Contiene el texto una o ninguna letra 'h'?</li>
+        <code>grep -E 'h?' ejemplo.txt</code>
+        <li>¿El texto contiene al menos dos letras 'a' seguidas?</li>
+        <code>grep -E 'a{2,}' ejemplo.txt</code>
+        <li>¿Comienza el texto por una letra mayúscula?</li>
+        <code>grep -E '^[A-Z]' ejemplo.txt</code>
+        <li>La frase no contiene ningún dígito:</li>
+        <code>grep -E '^\D+$' ejemplo.txt</code>
+    </ol>
+
+    <p>Por ejemplo, para evaluar un correo sería:</p>
+    <img src="{{ url_for('static', filename='ejemplo-regex.png')}}" alt="">
+{% endblock %}

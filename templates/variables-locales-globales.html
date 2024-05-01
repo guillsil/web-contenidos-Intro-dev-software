@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Variables locales y globales {% endblock %}
+
+
+{% block main %}
+    <h1>Una variable es una herramienta que nos permite almacenar información de algún tipo</h1>
+    <p>En particular puede ser: String, Integer, Array o Constantes.</p>
+    <h1>Variables de ambiente (globales y presentes en todos los Shells)</h1>
+    <p>Se definen como:</p>
+    <code>VARNAME="value"</code>
+    <p>Para usarlas en otros subshells se deberán exportar:</p>
+    <code>export VARNAME="value"</code>
+    <h1>Variables locales (definidas por el usuario)</h1>
+    <p>Las variables locales son aquellas que solo existen dentro del contexto de una función o bloque de código. No pueden ser accedidas desde fuera de ese contexto. En Python, se definen utilizando el prefijo <code>local</code> o simplemente asignando un valor dentro de una función.</p>
+{% endblock %}
+

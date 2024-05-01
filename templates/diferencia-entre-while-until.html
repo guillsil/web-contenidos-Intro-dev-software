@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Diferencia entre while y until en bash {% endblock %}
+
+
+{% block main %}
+<h1>La principal diferencia entre un while y un until en bash</h1>
+    <p>La principal diferencia entre un <strong>while</strong> y un <strong>until</strong> en bash es que el <strong>while</strong> se ejecutará mientras la condición sea verdadera, a diferencia del <strong>until</strong> que se ejecuta cuando la condición sea falsa.</p>
+    <h2>while:</h2>
+    <img src="{{ url_for('static', filename='while-bash.png')}}" alt="">
+    <h2>until:</h2>
+    <img src="{{ url_for('static', filename='until-bash.png')}}" alt="">
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Comparar Condicionales {% endblock %}
+
+
+{% block main %}
+<h1>Comparar Enteros y Cadenas en los Condicionales:</h1>
+    
+    <h2>Enteros:</h2>
+    <ul>
+        <li><code>-eq:</code> Si son Iguales</li>
+        <li><code>-ne:</code> Si no son iguales</li>
+        <li><code>-gt:</code> Si el primero es mayor al segundo</li>
+        <li><code>-ge:</code> Si el primero es mayor o igual al segundo</li>
+        <li><code>-lt:</code> Si el primero es menor al segundo</li>
+        <li><code>-le:</code> Si el primero es menor o igual al segundo</li>
+    </ul>
+    
+    <h2>Cadenas:</h2>
+    <ul>
+        <li><code>string1 == string2:</code> Si son Iguales</li>
+        <li><code>string1 != string2:</code> Si no son iguales</li>
+        <li><code>string1 =~ regex:</code> Devuelve True si la regex coincide</li>
+        <li><code>string1 > string2:</code> Si la primer cadena es mayor que la segunda por orden léxico. Lo contrario para <code>&lt;</code></li>
+        <li><code>-z string:</code> Devuelve True, si la longitud es cero</li>
+        <li><code>-n string:</code> Devuelve True, si la longitud NO es cero</li>
+    </ul>
+{% endblock %}

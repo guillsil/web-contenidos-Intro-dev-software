@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}TDD (Test-Driven Development) {% endblock %}
+
+
+{% block main %}
+    <h1>¿Qué es TDD?</h1>
+    <p>TDD (Test-Driven Development), en español Desarrollo Guiado por Pruebas, es una práctica de desarrollo de software en la que se escribe primero el código de prueba antes de escribir el código de producción. El proceso TDD sigue un ciclo repetitivo que consta de tres pasos principales:</p>
+    <ul>
+        <li><strong>Red (Rojo):</strong> Se escribe una prueba automatizada que falla inicialmente. Esta prueba debe capturar un requerimiento específico o comportamiento que se espera del código.</li>
+        <li><strong>Green (Verde):</strong> Se implementa el código mínimo necesario para que la prueba pase satisfactoriamente. En esta etapa, el objetivo es escribir el código de producción que satisfaga los requisitos de la prueba.</li>
+        <li><strong>Refactor (Refactorizar):</strong> Una vez que la prueba ha pasado, se puede mejorar la calidad del código sin cambiar su comportamiento. Esto implica eliminar duplicaciones, mejorar la legibilidad del código y aplicar buenas prácticas de diseño.</li>
+    </ul>
+{% endblock %}
+

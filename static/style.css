@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d6d0d0;
+}
+header {
+    text-align: center;
+    margin-top: 10;
+    padding: 5px;
+    background-color: #c9bfb2;
+}
+/*estilos para el main*/
+.main-container {
+    background-color: #c9bfb2;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #2e2e2e;
+    font-size: 24px;
+    font-weight: bold;
+}
+.principal {
+    color: #2e2e2e;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.principal a{
+    color: #2e2e2e;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+p {
+    color: black;
+    font-size: 27px;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul ul {
+    list-style-type: circle;
+    margin-left: 5px;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.li-principal{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333333;
+}
+
+code {
+    color: #666666;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+pre{
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #2e2e2e;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: black;
+}
+
+img{
+    width: 70%;
+    height: auto;
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 40px;
+    border: 2px solid #c9bfb2;
+    background-color: #c9bfb2;
+    font-weight: bold;
+    color: #2e2e2e;
+}
+.datos-person {
+    margin-right: 40px;
+}
+.datos-text {
+    margin-left: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2e2e2e;
+}
+
+
+/* Estilos para el footer */
+footer {
+    background-color: #c9bfb2;
+    color: black;
+    padding: 20px 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-section {
+    margin-right: 20px;
+}
+
+.footer-heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+.footer-list img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+}
+
+.footer-list a {
+    color: black;
+    text-decoration: none;
+}
+

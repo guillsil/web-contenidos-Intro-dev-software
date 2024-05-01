@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Virtual environment {% endblock %}
+
+
+{% block main %}
+    <h1>Virtual environment</h1>
+    <p>Para comenzar con este ejemplo utilizaremos un entorno virtual. Los entornos virtuales nos permiten instalar y utilizar librerías y la versión de Python necesaria para nuestro proyecto.</p>
+    <p>Para esto utilizaremos <code>pipenv</code> en nuestra carpeta del proyecto.</p>
+    <p>Luego instalaremos la librería <code>flask</code>.</p>
+    <p>Podemos verificar las dependencias instaladas.</p>
+    <p>Entonces podemos comenzar nuestro proyecto.</p>
+    <h1>Link para descargar un script que prepara el entorno virtual y instala un paquete si lo pasas como parametro:</h1>
+    <a href="{{ url_for('static', filename='preparar-venv.sh')}}"download>Descargar Script</a>
+
+{% endblock %}

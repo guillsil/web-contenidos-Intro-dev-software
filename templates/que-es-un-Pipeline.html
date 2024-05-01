@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}¿Qué es un Pipeline? {% endblock %}
+
+
+{% block main %}
+<h1>¿Qué es un Pipeline?</h1>
+    <p>Un Pipeline es una herramienta en la cual se puede usar la salida de un comando como entrada de otro comando y así sucesivamente. Por ejemplo:</p>
+    <p>Dado un archivo <code>datos.txt</code>, quiero contar la cantidad de líneas que tiene y luego filtrar las líneas que contienen una palabra en concreto. Esto se puede hacer de la siguiente manera:</p>
+    <code>cat datos.txt | wc -l | grep error</code>
+{% endblock %}
+

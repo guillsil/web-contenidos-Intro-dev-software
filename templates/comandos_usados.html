@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Comandos Comúnmente usados {% endblock %}
+
+
+{% block main %}
+<h1>Comandos Comúnmente usados</h1>
+    <h2>Modificar la palabra soltero por casado:</h2>
+    <code>sed -i 's/soltero/casado/g' datos_personales-modif.txtefd</code>
+
+    <h2>Contar la cantidad de letras de un archivo:</h2>
+    <code>grep -o '[[:alpha:]]' datos_personales.txt | wc -l</code>
+
+    <h2>Buscar un archivo en un directorio:</h2>
+    <code>archivos=$(ls | grep ".*\.$extension$")</code>
+    <br>
+    <h3>Buscar el directorio y listarlo si existe (para directorios se usa -d):</h3>
+    <code>directorio_encontrado=$(find / -type d -name "$parametro" 2>/dev/null)</code>
+    <br>
+    <h3>Buscar el directorio y listarlo si existe (para archivos se usa -f):</h3>
+    <code>directorio_encontrado=$(find / -type d -name "$parametro" 2>/dev/null)</code>
+</body>
+{% endblock %}

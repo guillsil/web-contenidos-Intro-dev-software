@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Modificación de URLs y Links {% endblock %}
+
+
+{% block main %}
+<h1>Modificación de Link:</h1>
+    <p>Toda referencia a links dentro del sitio o cualquier redirección se deberá crear mediante:</p>
+    <code>url_for('user', name='john', _external=True)</code>
+    <ul>
+        <li><code>_external=True</code> - Crea la dirección absoluta, ideal cuando necesitamos enviar un link por correo electrónico, por ejemplo.</li>
+    </ul>
+    
+    <h2>Modificación de Archivos Estáticos:</h2>
+    <p>Toda referencia a recursos estáticos como archivos javascript, imágenes, CSS, etc. se deberá crear mediante:</p>
+    <code>url_for('static', filename='css/styles.css', _external=True)</code>
+    <ul>
+        <li><code>static</code> - Hará referencia a la carpeta "static".</li>
+        <li><code>filename</code> - Informará la carpeta y el archivo particular a acceder.</li>
+    </ul>
+{% endblock %}
