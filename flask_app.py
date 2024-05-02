@@ -37,6 +37,14 @@ def page_que_es_un_script():
 def page_variables_globales_y_locales():
     return render_template("variables-locales-globales.html")
 
+@app.route("/estructuras-de-control-e-iteracion-en-bash")
+def page_estructuras_de_control_e_iterativas():
+    return render_template("estructuras-de-control-e-iterativas.html")
+
+@app.route("/ejercicios-de-bash")
+def page_ejercicios_en_bash():
+    return render_template("ejercicios-bash.html")
+
 @app.route("/comandos-comunmente-utilizados")
 def page_comandos_comunmente_utilizados():
     return render_template("comandos_usados.html")
