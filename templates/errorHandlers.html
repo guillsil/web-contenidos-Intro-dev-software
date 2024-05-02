@@ -3,27 +3,10 @@
 
 
 {% block main %}
-<h1>Error Handler</h1>
+    <h1>Error Handler</h1>
     <p>
         Flask posee un manejador de errores que pueden capturar errores que sucedan en el servidor y permitirnos crear una vista que lo muestre de una forma adecuada a la estética de nuestro proyecto web.
     </p>
-    <h2>Ejemplos de Error Handlers:</h2>
-    <pre><code>
-    from flask import Flask, render_template
-
-    app = Flask(__name__)
-
-    # Define the error handler for 404 Not Found
-    @app.errorhandler(404)
-    def page_not_found(error):
-        return render_template('404.html'), 404
-
-    # Define the error handler for 500 Internal Server Error
-    @app.errorhandler(500)
-    def internal_server_error(error):
-        return render_template('500.html'), 500
-
-    if __name__ == '__main__':
-        app.run()
-    </code></pre>
+    <h1>Ejemplos de Error Handlers:</h1>
+    <script src="https://gist.github.com/guillsil/9c2809d800a1cd51ef6f6a9ea2f240b1.js"></script>
 {% endblock %}

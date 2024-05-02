@@ -7,77 +7,126 @@
     <p>JavaScript es un lenguaje de programación que se utiliza para añadir interactividad a las páginas web. Permite crear animaciones, juegos, formularios dinámicos y mucho más. Es uno de los lenguajes de programación más populares del mundo y se utiliza en millones de sitios web.</p>
     <p>A su vez, también es utilizado como lenguaje para el backend, a través de aplicaciones de servidor como por ejemplo Node.js</p>
 
-    <h2>Variables y constantes:</h2>
+    <h1>Variables y constantes:</h1>
     <code>const CONSTANTES = algo</code>
+    <br>
+    <br>
     <code>let variables = algo</code>
 
-    <h2>Tipos de datos:</h2>
+    <h1>Tipos de datos:</h1>
     <code>const alumnos = 237 // number</code>
+    <br>
+    <br>
     <code>const precio = 1392.50 // number</code>
+    <br>
+    <br>
     <code>const nombre = "Bruno" // string</code>
+    <br>
+    <br>
     <code>const esDomingo = false // boolean</code>
+    <br>
+    <br>
     <code>const persona = {nombre: "pepe", edad: 26} // object</code>
+    <br>
+    <br>
     <code>const numeros = [1, 2, 3] // object</code>
+    <br>
+    <br>
     <code>let valorInicial = null // object</code>
+    <br>
+    <br>
     <code>const ultimoDigitoDePI = undefined // undefined</code>
 
-    <h2>Estructuras de control:</h2>
-    <h3>De Control:</h3>
+    <h1>Estructuras de control:</h1>
     <code>if (numero &lt; 20) {</code>
+        <br>
     <code>  console.log("El número es menor a 20")</code>
-    <code>} else if (numero == 20) {</code>
+    <br>
+    <code>}</code>
+    <br>
+    <code>else if (numero == 20) {</code>
+        <br>
     <code>  console.log("El número es igual a 20")</code>
-    <code>} else {</code>
+    <br>
+    <code>}</code>
+    <br>
+    <code>else {</code>
+        <br>
     <code>  console.log("El número es mayor a 20")</code>
+    <br>
     <code>}</code>
+    <br>
+    <h1>Estructuras Iterativas:</h1>
 
-    <h3>Iterativas:</h3>
     <code>while (numero &lt; 20) {</code>
+    <br>
     <code>  numero++ // numero = numero + 1</code>
+    <br>
     <code>}</code>
-
+    <br>
+    <br>
+    
     <code>for (let i=1; i&lt;5; i++) {</code>
+    <br>
     <code>  const nuevoValor = numero + i</code>
+    <br>
     <code>  console.log("Ahora el número vale: " + nuevoValor)</code>
+    <br>
     <code>}</code>
-
+    <br>
+    <br>
+    
     <code>switch(color) {</code>
+    <br>
     <code>  case "red": {</code>
+        <br>
     <code>    console.log("El color es rojo")</code>
+    <br>
     <code>    break</code>
+    <br>
     <code>  }</code>
+    <br>
     <code>  case "blue": {</code>
+        <br>
     <code>    console.log("El color es azul")</code>
+    <br>
     <code>    break</code>
+    <br>
     <code>  }</code>
-    <code>  case "yellow": {</code>
-    <code>    console.log("El color es amarillo")</code>
-    <code>    break</code>
-    <code>  }</code>
+    <br>
     <code>  default: {</code>
+        <br>
     <code>    console.log("El color no existe")</code>
+    <br>
     <code>  }</code>
+    <br>
     <code>}</code>
+    <br>
 
-    <h2>¿Qué es una Keyword?</h2>
+    <h1>¿Qué es una Keyword?</h1>
     <p>Las keywords o palabras reservadas son palabras que no se pueden usar para nombrar variables ya que son especiales para el compilador de JavaScript.</p>
     <p>Ejemplos: const, let, var, number, string, object, null, undefined, function, if, else, true, false, return, for, break, continue, while, switch, this, in, length, document</p>
     <p>Lista completa: <a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">https://www.w3schools.com/js/js_reserved.asp</a></p>
 
-    <h2>Cómo definir una función:</h2>
-    <p>Función normal:</p>
+    <h1>Cómo definir una función:</h1>
+    <h3>Función normal:</h3>
     <code>function modulo(x, y) {</code>
+    <br>
     <code>  const sumaCuadrados = x*x + y*y</code>
+    <br>
     <code>  const resultado = Math.sqrt(sumaCuadrados)</code>
+    <br>
     <code>  return resultado</code>
+    <br>
     <code>}</code>
+    <br>
 
-    <p>Función como tipo de dato:</p>
+    <h3>Función como tipo de dato:</h3>
     <code>const modulo = function(x, y) {</code>
     <code>  return Math.sqrt(x*x + y*y)</code>
     <code>}</code>
 
-    <p>Función Flecha:</p>
+    <h3>Función Flecha:</h3>
     <code>const suma = (x, y) => x + y</code>
 
     <p>En JavaScript, las funciones son first-class citizen, es decir, se pueden manipular como valores (como si fuera un string, por ejemplo)</p>
@@ -85,13 +134,17 @@
     <code>const filtrados = numeros.filter(x => x % 2 == 0)</code>
     <code>console.log(filtrados) // resultado: [2, 4, 6]</code>
 
-    <h2>API Requests</h2>
+    <h1>API Requests</h1>
     <code>const pokemonURL = "https://pokeapi.co/api/v2/pokemon?limit=3&offset=0"</code>
+    <br>
     <code>fetch(pokemonURL)</code>
+    <br>
     <code>  .then(response => response.json())</code>
+    <br>
     <code>  .then(json => console.log(json))</code>
+    <br>
 
-    <h2>DOM:</h2>
+    <h1>DOM:</h1>
     <p>El DOM (Document Object Model) es una interfaz de programación para representar elementos HTML como objetos en JavaScript. Permite la manipulación de nuestra página Web a través del código.</p>
     <ul>
         <li>Cada elemento HTML es un objeto en JavaScript</li>
@@ -99,34 +152,39 @@
         <li>Los elementos HTML responden a eventos. Esos eventos en JavaScript se representan como funciones asignadas al objeto.</li>
     </ul>
 
-    <h3>¿Cómo se usa el DOM?</h3>
+    <h1>¿Cómo se usa el DOM?</h1>
     <p>Ejemplo: obtener el contenido del segundo párrafo</p>
 
-    <p>HTML:</p>
+    <p>En HTML:</p>
     <code>&lt;p&gt;Hola mundo!&lt;/p&gt;</code>
+    <br>
     <code>&lt;p&gt;¡Aguante FIUBA!&lt;/p&gt;</code>
+    <br>
 
     <p>En JavaScript:</p>
     <code>const parrafos = document.getElementsByTagName("p")</code>
+    <br>
     <code>const textoParrafo2 = parrafos[1].innerText</code>
+    <br>
     <code>console.log(textoParrafo2)</code>
+    <br>
 
-    <h3>Algunas funciones y props. básicas del DOM</h3>
+    <h1>Algunas funciones y props. básicas del DOM</h1>
     <ul>
-        <li>document.getElementsByTagName(...)</li>
-        <li>document.getElementById(...)</li>
-        <li>document.getElementsByClassName(...)</li>
-        <li>document.createElement(...)</li>
-        <li>document.body</li>
-        <li>elemento.append(...)</li>
-        <li>elemento.appendChild(...)</li>
-        <li>elemento.innerText</li>
-        <li>elemento.innerHTML</li>
-        <li>elemento.style</li>
-        <li>elemento.parentElement</li>
+        <li><code>document.getElementsByTagName(...)</code></li>
+        <li><code>document.getElementById(...)</code></li>
+        <li><code>document.getElementsByClassName(...)</code></li>
+        <li><code>document.createElement(...)</code></li>
+        <li><code>document.body</code></li>
+        <li><code>elemento.append(...)</code></li>
+        <li><code>elemento.appendChild(...)</code></li>
+        <li><code>elemento.innerText</code></li>
+        <li><code>elemento.innerHTML</code></li>
+        <li><code>elemento.style</code></li>
+        <li><code>elemento.parentElement</code></li>
     </ul>
 
-    <h2>Eventos: nuestra página responde a acciones del usuario</h2>
+    <h1>Eventos: nuestra página responde a acciones del usuario</h1>
     <p>¿Qué pasa si hago click en un botón? ¿Cómo responde nuestra página ante este suceso? Esta situación es lo que se conoce como un evento.</p>
     <ul>
         <li>Un objeto DOM que "escuche" el evento (por ejemplo, un button)</li>

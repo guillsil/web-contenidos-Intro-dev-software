@@ -3,14 +3,9 @@
 
 
 {% block main %}
-<h1>Flask</h1>
-	<p>
-		Flask es un framework minimalista web muy popular que deja casi todas las decisiones de diseño y arquitectura en manos del desarrollador.
-	</p>
-	<h3>Para trabajar con distintos proyectos es necesario crear un ambiente virtual (virtual environment), esto permitirá que no hayan incompatibilidades entre diferentes versiones de dependencias instaladas entre un proyecto y otro.</h3>
-	<ul>
-		<li>pipenv</li>
-	</ul>
+	<h1>Flask</h1>
+	<p>Flask es un framework minimalista web muy popular que deja casi todas las decisiones de diseño y arquitectura en manos del desarrollador.</p>
+	<p>Para trabajar con distintos proyectos es necesario crear un ambiente virtual (virtual environment), esto permitirá que no hayan incompatibilidades entre diferentes versiones de dependencias instaladas entre un proyecto y otro.</p>
 	<h1>Creando un proyecto Flask</h1>
 	<ol>
 		<li>Crear un directorio donde usaremos el proyecto: <code>mkdir mi_proyecto</code></li>
@@ -20,6 +15,7 @@
 		<li>Activamos el proyecto: <code>pipenv shell</code></li>
 		<li>Continuamos configurando el proyecto dentro del archivo app.py</li>
 	</ol>
+	<a href="{{ url_for('page_scripts_para_flask')}}"> Acá se encuentran los scripts que automatizan todo lo mensionado arriba</a>
 	<h1>Templates :: Variables y estructuras</h1>
 	<p>
 		Dentro de un template, además de tener código HTML, también podremos incorporar en forma dinámica variables y estructuras tipo if o for, entre muchas cosas más.

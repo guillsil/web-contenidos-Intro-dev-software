@@ -19,7 +19,7 @@
         Los argumentos también pueden setearse luego
     </p>
 
-    <h2>Breakpoint</h2>
+    <h1>Breakpoint</h1>
     <p>
         Un breakpoint o punto de parada sirve para que al debuggear el debugger detenga la ejecución en la línea donde colocamos el breakpoint.
     </p>
@@ -32,7 +32,7 @@
         <code>Comando: b &lt;nombre de la función&gt;</code>
     </p>
 
-    <h2>Breakpoint condicional</h2>
+    <h1>Breakpoint condicional</h1>
     <p>
         Es un breakpoint que tiene asociada una condición. El programa se detendrá en esa línea si y sólo si se cumple la condición asociada.
     </p>
@@ -46,19 +46,19 @@
         Ejemplo: condition 1 fecha == 1012025
     </p>
 
-    <h2>Comandos: Continue</h2>
+    <h1>Comandos: Continue</h1>
     <p>
         Este comando permite continuar con la ejecución hasta el siguiente breakpoint o hasta el fin del programa.<br>
         <code>Comando: continue | c</code>
     </p>
 
-    <h2>Comandos: Next</h2>
+    <h1>Comandos: Next</h1>
     <p>
         Permite avanzar a la línea inmediatamente siguiente o si existe algún breakpoint intermedio, se detiene en él.<br>
         <code>Comando: next | n</code>
     </p>
 
-    <h2>Comandos: Step into</h2>
+    <h1>Comandos: Step into</h1>
     <p>
         Permite ingresar a la función de la siguiente función a ser llamada. Nos da la posibilidad de examinar el contenido de una función sin necesidad de agregar un breakpoint interno y poder ver los valores en el scope de esta función.
     </p>
@@ -67,14 +67,14 @@
         En lo más bajo: <code>stepi | si</code> permite avanzar una única instrucción a nivel máquina.
     </p>
 
-    <h2>Comandos: Step Out</h2>
+    <h1>Comandos: Step Out</h1>
     <p>
         Sale de la función actual hacia la función que la llamó.<br>
         <code>Comando: finish</code><br>
         Si en el flujo de ejecución existe un endpoint se detendrá en él.
     </p>
 
-    <h2>Información de variables</h2>
+    <h1>Información de variables</h1>
     <p>
         Permite observar el contenido en ese instante de ejecución de las variables.<br>
         <code>Comando: print | p &lt;nombre de la variable&gt;</code>
@@ -84,13 +84,13 @@
         <code>Comando: watch &lt;nombre de la variable&gt;</code>
     </p>
 
-    <h2>Seteo de variables</h2>
+    <h1>Seteo de variables</h1>
     <p>
         Permite cambiar el valor de las variables en tiempo de ejecución pudiendo así llegar a casos bordes o permitiendo hacer análisis del comportamiento del programa en ese contexto.<br>
         <code>Comando: set &lt;nombre de la variable&gt; = &lt;valor&gt;</code>
     </p>
 
-    <h2>Stack trace</h2>
+    <h1>Stack trace</h1>
     <p>
         Muestra la pila de ejecución del programa en ese momento. Nos permite observar en qué función estamos, quién y dónde se llamó a esa función.<br>
         Un stack trace es un informe de los elementos activos en la pila de ejecución en un momento determinado durante la ejecución de un programa.<br>

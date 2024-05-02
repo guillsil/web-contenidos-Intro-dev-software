@@ -6,29 +6,14 @@
 <h1>Como hacer test en Python:</h1>
     <p>Supongamos que tienes una función simple llamada <code>suma</code> que toma dos números y devuelve su suma:</p>
 
-    <pre><code>def suma(a, b):
+    <code>def suma(a, b):
+        <br>
         return a + b
-    </code></pre>
+    </code>
 
     <p>Y quieres escribir pruebas para esta función. Puedes hacerlo de la siguiente manera utilizando <code>unittest</code>:</p>
 
-    <pre><code>import unittest
-    def suma(a, b):
-        return a + b
-
-    class TestSuma(unittest.TestCase):
-
-        def test_suma_positivos(self):
-            self.assertEqual(suma(3, 5), 8)  # Verifica si 3 + 5 = 8
-
-        def test_suma_negativos(self):
-            self.assertEqual(suma(-1, -1), -2)  # Verifica si -1 + (-1) = -2
-
-        def test_suma_mezcla(self):
-            self.assertEqual(suma(2, -4), -2)  # Verifica si 2 + (-4) = -2
-
-    if __name__ == '__main__':
-        unittest.main()</code></pre>
+    <script src="https://gist.github.com/guillsil/7db986488130accb5ab88771db47b4f5.js"></script>
 
     <p>En este ejemplo, hemos definido tres pruebas en la clase <code>TestSuma</code>. Cada método dentro de esta clase comienza con el prefijo <code>test_</code>, lo que indica a <code>unittest</code> que debe ejecutarlo como una prueba. Usamos métodos de aserción como <code>assertEqual</code> para verificar si la función <code>suma</code> produce los resultados esperados para diferentes casos.</p>
 

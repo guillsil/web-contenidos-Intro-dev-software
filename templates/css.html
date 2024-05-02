@@ -3,17 +3,17 @@
 
 
 {% block main %}
-<h1>¿Qué es CSS? ¿Para qué se usa?</h1>
+    <h1>¿Qué es CSS? ¿Para qué se usa?</h1>
     <p>CSS (Cascading Style Sheets) u Hojas de estilo en cascada es un lenguaje de hojas de estilo, es decir, te permite aplicar estilos de manera selectiva a elementos en documentos HTML.</p>
     
-    <h2>Estructura básica de CSS</h2>
+    <h1>Estructura básica de CSS</h1>
     <pre>
         selector {
             atributo: valor;
         }
     </pre>
     
-    <h2>Selectores</h2>
+    <h1>Selectores</h1>
     <p>Los selectores nos indican con base en qué criterio CSS selecciona qué elementos de nuestra página va a tomar para aplicarle un conjunto de atributos. En otras palabras: ¿a qué cosas le cambio el estilo?</p>
     <p>Tipos de selectores:</p>
     <ul>
@@ -25,7 +25,7 @@
         <li>Selector universal (*)</li>
     </ul>
     
-    <h2>Atributos</h2>
+    <h1>Atributos</h1>
     <p>Los atributos CSS se refieren a la característica visible o estructural que queremos modificar de un elemento. Por ejemplo: el color del texto o la forma de mostrar un botón con respecto al resto de la página.</p>
     <p>Algunos atributos básicos son:</p>
     <ul>
@@ -33,52 +33,7 @@
         <li>Elementos: display, padding, margin, border-radius, width, height, opacity, flex</li>
     </ul>
     
-    <h2>Ejemplo básico de CSS</h2>
-    <pre>
-        body, button {
-            font-family: Cambria, sans-serif;
-            background-color: #323232;
-            color: rgb(245, 64, 121);
-        }
-        
-        .titulo {
-            margin-bottom: 1.5em;
-            color: violet;
-        }
-        
-        #productos, footer {
-            text-align: center;
-        }
-        
-        li {
-            list-style-type: none;
-            margin-bottom: 2vh;
-        }
-        
-        #boton-ver-mas {
-            font-size: 16px;
-            border-radius: 10px;
-            width: 75px;
-            height: 30px;
-            margin-top: 4vh;
-        }
-        
-        footer {
-            margin-top: 30px;
-            border-top: gray 2px solid;
-            color: gray;
-        }
-        
-        button:hover {
-            cursor: pointer;
-        }
-        
-        #productos, button {
-            color: rgb(245, 64, 121);
-        }
-    </pre>
-    
-    <h2>Insertando CSS a una página Web</h2>
+    <h1>Insertando CSS a una página Web</h1>
     <p>Existen 3 formas de insertar código CSS a una página Web:</p>
     <ol>
         <li>Inline: inserto el estilo directamente como atributo del elemento HTML:</li>
@@ -114,4 +69,6 @@
                 &lt;/html&gt;
         </pre>
     </ol>
+    <h2>Ejemplo básico de CSS</h2>
+    <script src="https://gist.github.com/guillsil/a486bb3cee28891d1168cae9d26d01f9.js"></script>
 {% endblock %}

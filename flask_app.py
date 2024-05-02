@@ -89,6 +89,9 @@ def page_introduccion_a_flask():
 def page_introduccion_al_desarrollo_web():
     return render_template("introduccion-Desarrollode-Web.html")
 
+@app.route("/scripts-para-preparar-flask")
+def page_scripts_para_flask():
+    return render_template("scripts-para-preparar-flask.html")
 
 @app.route("/flask")
 def page_flask():
@@ -177,3 +180,4 @@ def page_not_found(e):
 
 if __name__ == "__main__":
     app.run("127.0.0.1", port=5001, debug=True)
+    

@@ -3,12 +3,12 @@
 
 
 {% block main %}
-<h1>Creación de Formularios:</h1>
+    <h1>Creación de Formularios:</h1>
     <p>Los formularios dentro de un sitio web son fundamentales para poder interactuar con el usuario. Si bien Flask posee una dependencia que agiliza y permite crear formularios más robustos y seguros, en la materia vamos a utilizar los métodos tradicionales de etiquetas <code>&lt;form&gt;</code> y métodos POST para enviar la información.</p>
 
-    <h2>Definición de un formulario en HTML:</h2>
+    <h1>Definición de un formulario en HTML:</h1>
     <img src="{{ url_for('static', filename='form.png')}}" alt="">
-    <h2>Definición de form-handler (lado servidor)</h2>
+    <h1>Definición de form-handler (lado servidor)</h1>
     <p>Debemos definir el tipo de método que recibirá la ruta, en este caso GET (por defecto) + POST (para el envío de la información)</p>
     
     <img src="{{ url_for('static', filename='form-2.png')}}" alt="">
