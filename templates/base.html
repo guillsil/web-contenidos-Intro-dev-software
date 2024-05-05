@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="header-container">
-            <h1 class="principal"><a href="{{ url_for('index')}}">Desarrollo de Software</a></h1>
+            <h1><a href="{{ url_for('index')}}"> < Dev de Software > </Desarrollo></a></h1>
         </div>
     </header>
     <div class="main-container">
@@ -18,16 +18,15 @@
 
         {% endblock %}
     </div>
+    
     {% block extra %}
     {% endblock %}
-    
-    
     <footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h2 class="footer-heading">Contáctanos</h2>
                 <ul class="footer-list">
-                    <li><a href="#"><img src="{{url_for('static', filename='mail.svg', _external=True)}}" alt="">Correo Electrónico</a></li>
+                    <li><a href="#"><img src="{{url_for('static', filename='mail.svg', _external=True)}}" alt="">Mail</a></li>
                     <li><a href="#"><img src="{{url_for('static', filename='phone.svg', _external=True)}}" alt="">Teléfono</a></li>
                     <li><a href="#"><img src="{{url_for('static', filename='home.svg', _external=True)}}" alt="">Dirección</a></li>
                 </ul>
@@ -38,14 +37,6 @@
                     <li><a href="#"><img src="{{url_for('static', filename='facebook.svg', _external=True)}}" alt="logo facebook">Facebook</a></li>
                     <li><a href="#"><img src="{{url_for('static', filename='twitter.svg', _external=True)}}" alt="twitter logo">Twitter</a></li>
                     <li><a href="#"><img src="{{url_for('static', filename='instagram.svg', _external=True)}}" alt="instagram logo">Instagram</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h2 class="footer-heading">Recursos</h2>
-                <ul class="footer-list">
-                    <li><a href="#">Documentación</a></li>
-                    <li><a href="#">Tutoriales</a></li>
-                    <li><a href="#">FAQs</a></li>
                 </ul>
             </div>
         </div>

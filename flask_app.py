@@ -160,6 +160,19 @@ def page_introduccion_a_scrum():
 def page_proyectos():
     return render_template("proyectos.html")
 
+@app.route("/repaso-parcial")
+def page_repaso_para_el_parcial():
+    return render_template("repaso-parcial.html")
+
+@app.route("/parcial")
+def page_parcial():
+    return render_template("parcial.html")
+
+@app.route("/parcial-resolucion")
+def page_parcial_resuelto():
+    return render_template("parcial-resuelto.html")
+
+
 @app.route("/form_feedback", methods=['GET', 'POST'])
 def form_feedback():
     if request.method == 'POST':
