@@ -172,6 +172,18 @@ def page_parcial():
 def page_parcial_resuelto():
     return render_template("parcial-resuelto.html")
 
+@app.route("/feddback")
+def page_feedback():
+    return render_template("feedback.html")
+
+@app.route("/soy")
+def page_soy():
+    return render_template("soy.html")
+
+@app.route("/contacto")
+def page_contacto():
+    return render_template("contacto.html")
+
 
 @app.route("/form_feedback", methods=['GET', 'POST'])
 def form_feedback():

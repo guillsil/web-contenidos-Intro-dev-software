@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>{% block title %} {% endblock %}</title>
 </head>
 
 <body>
     <header>
-        <div class="header-container">
-            <h1><a href="{{ url_for('index')}}"> < Dev de Software > </Desarrollo></a></h1>
+        <div class="header-logo">
+            <h1><a href="{{ url_for('index')}}"> < I. Dev Software > </Desarrollo></a></h1>
         </div>
+
+        <button class="abrir-menu" id="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar-menu"><i class="bi bi-x"></i></button>
+            <ul class="nav-list">
+                <li><a href="{{ url_for('index')}}">Inicio</a></li>
+                <li><a href="{{ url_for('page_feedback')}}">Feedback</a></li>
+                <li><a href="{{ url_for('page_contacto')}}">Contacto</a></li>
+                <li><a href="{{ url_for('page_soy')}}">Quien soy?</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="main-container">
         {% block main %}
@@ -21,25 +33,27 @@
     
     {% block extra %}
     {% endblock %}
+    
     <footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h2 class="footer-heading">Contáctanos</h2>
                 <ul class="footer-list">
-                    <li><a href="#"><img src="{{url_for('static', filename='mail.svg', _external=True)}}" alt="">Mail</a></li>
-                    <li><a href="#"><img src="{{url_for('static', filename='phone.svg', _external=True)}}" alt="">Teléfono</a></li>
-                    <li><a href="#"><img src="{{url_for('static', filename='home.svg', _external=True)}}" alt="">Dirección</a></li>
+                    <li><a href="#"><i class="bi bi-envelope"></i>Email</a></li>
+                    <li><a href="#"><i class="bi bi-telephone"></i>Teléfono</a></li>
+                    <li><a href="#"><i class="bi bi-house"></i>Dirección</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h2 class="footer-heading">Síguenos</h2>
                 <ul class="footer-list">
-                    <li><a href="#"><img src="{{url_for('static', filename='facebook.svg', _external=True)}}" alt="logo facebook">Facebook</a></li>
-                    <li><a href="#"><img src="{{url_for('static', filename='twitter.svg', _external=True)}}" alt="twitter logo">Twitter</a></li>
-                    <li><a href="#"><img src="{{url_for('static', filename='instagram.svg', _external=True)}}" alt="instagram logo">Instagram</a></li>
+                    <li><a href="#"><i class="bi bi-facebook"></i>Facebook</a></li>
+                    <li><a href="#"><i class="bi bi-twitter"></i>Twitter</a></li>
+                    <li><a href="#"><i class="bi bi-instagram"></i>Instagram</a></li>
                 </ul>
             </div>
         </div>
     </footer>
+    <script src="{{ url_for('static', filename='app.js')}}"></script>
 </body>
 </html>

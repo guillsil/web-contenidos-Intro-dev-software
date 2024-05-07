@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Feedback{% endblock %}
+
+
+{% block main %}
+<form action="{{'form_feedback'}}" id="form_feedback" method="post">
+    <div class="datos-person">
+      <label for="name">Nombre/s</label>
+      <input type="text" id="name" name="name" />
+      <label for="lastname">Apellido/s</label>
+      <input type="text" id="lastname" name="lastname" />
+      <label for="email">Correo Electrónico</label>
+      <input type="email" id="email" name="email" />
+    </div>
+    <div class="datos-text">
+      <label for="feedback">feedback</label>
+      <textarea id="feedback" name="feedback" rows="8" cols="50"></textarea>
+      <button type="submit" name="submit"><i class="bi bi-send"></i></button>
+    </div>
+  </form>
+{% endblock %}
