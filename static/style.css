@@ -13,7 +13,7 @@ Estilos al Header
 */
 header {
   display: flex;
-  padding: 1rem;
+  padding: 0 20px;
   align-items: center;
   background-color: rgb(37, 58, 69);
   justify-content: space-between;
@@ -25,7 +25,12 @@ header {
   max-width: 2rem;
   text-decoration: none;
 }
-
+svg {
+  max-width: 50px;
+  height: auto;
+  cursor: pointer;
+  margin-left: 20px;
+}
 .abrir-menu, .cerrar-menu {
   display: none;
 }
@@ -247,6 +252,15 @@ footer {
 }
 
 @media screen and (max-width: 778px) {
+  header{
+    padding: 0 5px;
+  }
+  .main-container article h2 {
+    font-size: 20px;
+  }
+  .main-container article a {
+    font-size: 20px;
+  }
   .abrir-menu, .cerrar-menu  {
     display: block;
     border: 0;
@@ -282,7 +296,7 @@ footer {
   .nav-list {
     flex-direction: column;
     align-items: center;
-    background-color: rgb(3, 19, 38);
+    background-color: rgb(22, 31, 43);
     text-align: center;
     padding: 1rem;
   }

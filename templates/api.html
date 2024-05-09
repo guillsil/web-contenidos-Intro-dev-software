@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}APIs{% endblock %}
+
+
+{% block main %}
+<h1>Qué es una API?</h1>
+    <p>Una API o interfaz de programación de aplicaciones es un conjunto de definiciones y protocolos que se usa para diseñar e integrar el software de las aplicaciones.</p>
+    <p>Las API permiten que sus productos y servicios se comuniquen con otros, sin necesidad de saber cómo están implementados.</p>
+    <p>En nuestro caso utilizaremos, una API para comunicar el front end de la aplicación con los datos almacenados en el back end (posteriormente veremos)</p>
+
+    <h2>Tipos de APIs - Según su política de uso</h2>
+    <ol>
+        <li>APIs públicas o abiertas</li>
+        <p>Las APIs públicas también son conocidas como API abiertas y están disponibles para que otros usuarios o desarrolladores las empleen con mínimas restricciones o, en algunos casos incluso, están totalmente accesibles.</p>
+        <li>APIs privadas o internas</li>
+        <p>Las APIs privadas o internas están ocultas de los usuarios externos y se exponen únicamente para los sistemas internos de una organización. Se emplean para el desarrollo interno de la empresa, optimizando la productividad y la reutilización de servicios.</p>
+        <li>APIs de aliados comerciales o Partners</li>
+        <p>Las APIs de aliados comerciales son aquellas que se exponen entre los miembros de una alianza comercial. Como no están disponibles para todos, se necesita una autorización especial para usarlas.</p>
+        <li>APIs compuestas</li>
+        <p>Las APIs compuestas utilizan distintos datos o diversas APIs de servicio y permiten que los desarrolladores puedan acceder a varios terminales.</p>
+        <li>API de datos</li>
+        <p>Las APIs de datos proporcionan a varios bancos de datos o proveedores SaaS (Software as a Service o Software como Servicio) acceso CRUD (Create, Read, Update, Delete) a conjuntos de datos, permitiendo la comunicación entre una aplicación y un sistema de gestión de bases de datos.</p>
+        <li>API de sistemas operativos</li>
+        <p>Este grupo de APIs definen cómo las aplicaciones usan los recursos disponibles y servicios del sistema operativo. Por lo que cada OS (Operative System) posee un conjunto de APIs.</p>
+        <li>APIs remotas</li>
+        <p>Este grupo define los estándares de interacción que las aplicaciones tienen en diferentes dispositivos, es decir, un software accede a ciertos recursos ubicados fuera del dispositivo que los solicita, como dice su nombre. Como dos aplicaciones se conectan de forma remota a través de una red, las APIs remotas usan protocolos para lograr la conexión.</p>
+        <li>APIs web</li>
+        <p>Esta clase de API es la más común, dado que las APIs web proporcionan datos que los dispositivos pueden leer y transferirlos entre sistemas basados en la web o arquitectura cliente-servidor.</p>
+    </ol>
+
+    <h2>Protocolos en APIs</h2>
+    <p>Los protocolos de API permiten estandarizar el intercambio de datos entre los diferentes servicios web. Esto brinda la oportunidad de acceder a capacidades en diversos sistemas, a través de diferentes lenguajes de programación y en distintos sistemas operativos.</p>
+    <ul>
+        <li>RCP - Remote Procedure Call</li>
+        <li>SOAP - Service Object Access Protocol</li>
+        <li>REST - Representational State Transfer</li>
+        <li>GraphQL</li>
+    </ul>
+
+    <h3>REST - Representational State Transfer</h3>
+    <p>REST es una interfaz para conectar varios sistemas basados en el protocolo HTTP (uno de los protocolos más antiguos) y nos sirve para obtener y generar datos y operaciones, devolviendo esos datos en formatos muy específicos, como XML y JSON.</p>
+    <ul>
+        <li>Un protocolo cliente/servidor sin estado: cada mensaje HTTP contiene toda la información necesaria para comprender la petición. Como resultado, ni el cliente ni el servidor necesitan recordar ningún estado de las comunicaciones entre mensajes.</li>
+        <li>Un conjunto de operaciones bien definidas que se aplican a todos los recursos de información: HTTP en sí define un conjunto pequeño de operaciones, las más importantes son POST, GET, PUT y DELETE.</li>
+        <li>Una sintaxis universal para identificar los recursos. En un sistema REST, cada recurso es direccionable únicamente a través de su URI.</li>
+        <li>El uso de hipermedios, tanto para la información de la aplicación como para las transiciones de estado de la aplicación: la representación de este estado en un sistema REST son típicamente HTML o XML. Como resultado de esto, es posible navegar de un recurso REST a muchos otros, simplemente siguiendo enlaces.</li>
+    </ul>
+
+    <h3>Verbos HTTP - Métodos</h3>
+    <ul>
+        <li>GET: Obtiene un recurso</li>
+        <li>POST: Crear un nuevo recurso</li>
+        <li>PUT: Modifica los datos</li>
+        <li>DELETE: Elimina un recurso</li>
+        <li>PATCH: Modifica un recurso en particular</li>
+    </ul>
+
+    <h2>Requests</h2>
+    <p>Las requests deben estar formadas con una serie de elementos:</p>
+    <ul>
+        <li>Verbo o Método HTTP</li>
+        <li>URI (Uniform Resource Identifier)</li>
+        <li>Versión de HTTP</li>
+    </ul>
+    <p>Los request también pueden tener un header o encabezado, el cual amplía la información sobre la request.</p>
+
+    <h2>Headers</h2>
+    <p>Algunos de los encabezados HTTP más comunes incluyen:</p>
+    <ul>
+        <li>Host: Especifica el nombre del host al que se envía la solicitud.</li>
+        <li>User-Agent: Identifica el navegador o el cliente que envía la solicitud.</li>
+        <li>Accept: Especifica el tipo de contenido que el cliente puede aceptar.</li>
+        <li>Content-Type: Especifica el tipo de contenido de la respuesta.</li>
+        <li>Content-Length: Especifica la longitud de la respuesta.</li>
+        <li>Authorization: Proporciona información de autenticación para la solicitud.</li>
+        <li>Cache-Control: Controla cómo se almacena en caché la respuesta.</li>
+    </ul>
+
+    <h2>Responses</h2>
+    <p>El objeto response se utiliza para especificar el código de estado de la respuesta, los encabezados y el cuerpo de la respuesta. El código de estado de la respuesta es un número que indica el resultado de la solicitud.</p>
+    <ul>
+        <li>200 OK: La solicitud se completó correctamente.</li>
+        <li>201 Created: Se ha creado un nuevo recurso.</li>
+        <li>400 Bad Request: La solicitud es incorrecta.</li>
+        <li>404 Not Found: El recurso solicitado no se encontró.</li>
+        <li>500 Internal Server Error: Se produjo un error interno en el servidor.</li>
+    </ul>
+    <p>Para mas errores ver <a href="https://boingboing.net/2011/12/14/http-status-cats-by-girliemac.html">click</a></p>
+
+    <h2>RESTful API</h2>
+    <p>Entonces una RESTful API es una API que sigue los principios de REST.</p>
+    <p>Los principios RESTful se basan en la idea de que los recursos se representan como objetos y que las operaciones sobre esos recursos se realizan utilizando métodos HTTP estándar. Esto hace que las APIs RESTful sean fáciles de consumir y desarrollar.</p>
+
+    <h2>Postman</h2>
+    <p>Postman es una herramienta de colaboración y desarrollo que permite a los desarrolladores interactuar y probar el funcionamiento de servicios web y aplicaciones, proporcionando una interfaz gráfica intuitiva y fácil de usar para enviar solicitudes a servidores web y recibir las respuestas correspondientes.</p>
+    <p>Con esta plataforma se puede gestionar diferentes entornos de desarrollo, organizar las solicitudes en colecciones y realizar pruebas automatizadas para verificar el comportamiento de los sistemas.</p>
+    <p>Postman es utilizado por los desarrolladores para testear colecciones y catálogos APIs (tanto a nivel front-end como back-end), para gestionar el ciclo de vida de las APIs, mejorar el trabajo colaborativo y mejorar la organización del proceso de diseño y desarrollo.</p>
+    <p>Link: <a href="https://www.postman.com/downloads/">https://www.postman.com/downloads/</a></p>
+{% endblock %}

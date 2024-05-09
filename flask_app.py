@@ -197,7 +197,13 @@ def form_feedback():
         else:
             return render_template('404.html')
     return render_template('404.html')
-        
+
+@app.route("/api")
+def page_api():
+    return render_template("api.html")
+
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
