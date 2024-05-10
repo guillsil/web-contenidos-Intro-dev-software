@@ -3,7 +3,8 @@
 
 
 {% block main %}
-<form action="{{'form_feedback'}}" id="form_feedback" method="post">
+<div class="main-container-two">
+  <form action="{{'form_feedback'}}" id="form_feedback" method="post">
     <div class="datos-person">
       <label for="name">Nombre/s</label>
       <input type="text" id="name" name="name" />
@@ -18,4 +19,5 @@
       <button type="submit" name="submit"><i class="bi bi-send"></i></button>
     </div>
   </form>
+</div>
 {% endblock %}

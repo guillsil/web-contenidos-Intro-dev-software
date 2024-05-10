@@ -254,6 +254,10 @@ footer {
   header{
     padding: 0 5px;
   }
+  .main-container-two {
+    background-color: rgb(139, 151, 157);
+    padding: 3rem;
+}
   .main-container article h2 {
     font-size: 20px;
   }
