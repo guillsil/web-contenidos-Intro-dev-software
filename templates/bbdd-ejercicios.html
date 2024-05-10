@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Ejercicios de Bases de Datos{% endblock %}
+
+
+{% block main %}
+<h1>Doom Table</h1>
+    <h2>Para preparar el entorno requerido se debra seguir las instrucciones del siguiente enlace:</h2>
+    <a href="https://github.com/gcc-cdimatteo/introds-sql/tree/main" target="_blank" rel="noopener noreferrer">Link</a>
+    <h3>Requisitos para poder empezar a practicar:</h3>
+    <ul>
+        <li>Docker Desktop</li>
+        <li>Azure Data Studio</li>
+    </ul>
+
+    <p>Crear una tabla doom y eliminarla de la base de datos.</p>
+    <script src="https://gist.github.com/guillsil/90cbec381a4bc280a3ff3ef3d400d147.js"></script>
+
+    <h1>Tabla "Departamentos"</h1>
+    <p>Crear una tabla que contenga la información de los distintos departamentos que figuran en la tabla de materias.</p>
+    <script src="https://gist.github.com/guillsil/75b100a06438dab684208e57596c8a2b.js"></script>
+
+    <h1>Filtrar Materias por Departamento</h1>
+    <p>Obtener las materias de los departamentos de Física y Matemática.</p>
+    <code>SELECT * FROM materias WHERE departamento in (61, 62) ;</code>
+
+    <h1>Materias por Nombre</h1>
+    <p>Encontrar todas las materias que contienen la palabra "Programacion" en su nombre.</p>
+    <code>SELECT * FROM materias WHERE nombre LIKE "%Programacion%";</code>
+
+    <h1>Notas de un Alumno</h1>
+    <p>Obtener las notas del alumno 103533.</p>
+    <code>SELECT * FROM notas WHERE padron = 103533;</code>
+
+    <h1>Eliminar Departamentos</h1>
+    <p>Obtener las materias menos las que pertenezcan al departamento de Matemática.</p>
+    <code>SELECT * FROM materias WHERE departamento <> 61;</code>
+
+    <h1>Filtro de Departamentos</h1>
+    <p>Obtener todas las materias menos las que pertenezcan al departamento de Matemática o al de Física.</p>
+    <code>SELECT * FROM materias WHERE departamento NOT IN (61, 62);</code>
+
+    <h1>Alumnos Promocionados y Regulares</h1>
+    <p>Obtener el padrón y la nota de los alumnos que promocionaron (&gt;= 7) Taller de Programacion I.</p>
+    <code>SELECT padron, nota FROM notas WHERE nota &gt;= 7 AND departamento = 75 AND codigo = 42;</code>
+    <p>Obtener el padrón y la nota de los alumnos que no promocionaron pero aprobaron la materia (4 &lt;= nota &lt; 7).</p>
+    <code>SELECT padron, nota FROM notas WHERE nota &gt;= 4 AND nota &lt; 7;</code>
+
+{% endblock %}

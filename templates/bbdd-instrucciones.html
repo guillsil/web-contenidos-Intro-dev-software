@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Instruciiones de Tabla y de Datos {% endblock %}
+
+
+{% block main %}
+<h1>Instrucciones de Tablas</h1>
+    <h2>CREATE:</h2>
+    <script src="https://gist.github.com/guillsil/fc4938a39cb1b842a967b679cbc8a584.js"></script>
+
+    <h2>DROP:</h2>
+    <p>DROP TABLE table_name</p>
+
+    <h2>TRUNCATE:</h2>
+    <p>TRUNCATE TABLE table_name;</p>
+
+    <h2>DELETE:</h2>
+    <p>DELETE FROM table_name<br>
+    WHERE some_condition;</p>
+
+    <h2>ALTER:</h2>
+    <p>ALTER TABLE table_name ADD (<br>
+    columnname_1  datatype,<br>
+    columnname_2  datatype,<br>
+    …<br>
+    columnname_n  datatype<br>
+    );</p>
+    <h1>Instrucciones de Datos:</h1>
+    <h1>SELECT:</h1>
+    <script src="https://gist.github.com/guillsil/93bcb17c099db58e435e743ad5d31a66.js"></script>
+
+    <h1>WHERE:</h1>
+    <ul>
+        <li>=</li>
+        <li>&lt;&gt;</li>
+        <li>&gt;</li>
+        <li>&lt;</li>
+        <li>&gt;=</li>
+        <li>&lt;=</li>
+        <li>in</li>
+        <li>not in</li>
+        <li>like (%)</li>
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block title %}Bases de Datos {% endblock %}
+
+
+{% block main %}
+<h1>Bases de Datos (BBDD) ó Data Bases (DB):</h1>
+    <p>¿Qué es?</p>
+    <ul>
+        <li>Herramienta para recopilar y organizar información.</li>
+        <li>Conecta datos en una unidad lógica.</li>
+        <li>Nos resuelve la problemática de manejar datos.</li>
+    </ul>
+    <h2>Las hay de tipo</h2>
+    <ul>
+        <li>Relacionales</li>
+        <li>No Relacionales</li>
+    </ul>
+    <h2>Bases de Datos Relacionales → ¡SQL!</h2>
+    <ul>
+        <li>Almacenan los datos en tablas con columnas y filas.</li>
+        <li>Cada columna representa un atributo de datos específico y cada fila representa una instancia de esos datos.</li>
+    </ul>
+    <img src="{{ url_for('static', filename='/images/images-clases/bbdd-relacionales-1.png')}}" alt="">
+    <img src="{{ url_for('static', filename='/images/images-clases/bbdd-relacionales-2.png')}}" alt="">
+    <img src="{{ url_for('static', filename='/images/images-clases/bbdd-relacionales-3.png')}}" alt="">
+    <p>Bases de Datos No Relacionales</p>
+    <p>Existen varios sistemas de bases de datos no relacionales diferentes debido a las variaciones en la forma en que administran y almacenan los datos sin esquemas. Los datos sin esquema son datos que se almacenan sin las restricciones que requieren las bases de datos relacionales.</p>
+    <h4>Ejemplo:</h4>
+    <ul>
+        <li>mongoDB</li>
+        <li>neo4j</li>
+    </ul>
+    <h3>BDD Relacionales vs. No Relacionales</h3>
+    <img src="{{ url_for('static', filename='/images/images-clases/bbdd-rynr.png')}}" alt="">
+    <h3>Tipos de Datos en SQL:</h3>
+    <table>
+        <tr>
+            <th>Tabla</th>
+            <th>Tipo de Dato</th>
+        </tr>
+        <tr>
+            <td>binary varying</td>
+            <td>varbinary</td>
+        </tr>
+        <tr>
+            <td>char varying</td>
+            <td>varchar</td>
+        </tr>
+        <tr>
+            <td>character</td>
+            <td>char</td>
+        </tr>
+        <tr>
+            <td>character</td>
+            <td>char(1)</td>
+        </tr>
+        <tr>
+            <td>character(n)</td>
+            <td>char(n)</td>
+        </tr>
+        <tr>
+            <td>character varying(n)</td>
+            <td>varchar(n)</td>
+        </tr>
+        <tr>
+            <td>dec</td>
+            <td>decimal</td>
+        </tr>
+        <tr>
+            <td>double precision</td>
+            <td>float</td>
+        </tr>
+        <tr>
+            <td>float[(n)] for n = 1-7</td>
+            <td>real</td>
+        </tr>
+        <tr>
+            <td>float[(n)] for n = 8-15</td>
+            <td>float</td>
+        </tr>
+        <tr>
+            <td>integer</td>
+            <td>int</td>
+        </tr>
+        <tr>
+            <td>national character(n)</td>
+            <td>nchar(n)</td>
+        </tr>
+        <tr>
+            <td>national char(n)</td>
+            <td>nchar(n)</td>
+        </tr>
+        <tr>
+            <td>national character varying(n)</td>
+            <td>nvarchar(n)</td>
+        </tr>
+        <tr>
+            <td>national char varying(n)</td>
+            <td>nvarchar(n)</td>
+        </tr>
+        <tr>
+            <td>national text</td>
+            <td>ntext</td>
+        </tr>
+        <tr>
+            <td>rowversion</td>
+            <td>timestamp</td>
+        </tr>
+    </table>
+    <h3>Claves:</h3>
+    <ul>
+        <li>A cada tabla se le asigna una clave principal, una columna de identificador que identifica de forma exclusiva la tabla.</li>
+        <li>La clave principal se utiliza para establecer relaciones entre las tablas.</li>
+        <li>Una vez que se conectan dos tablas, se obtienen datos de ambas con una sola consulta.</li>
+    </ul>
+
+{% endblock %}
+

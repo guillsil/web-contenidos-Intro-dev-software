@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request, redirect, url_for
-
-
+import json
+from dicc import data
 
 app = Flask(__name__)
 
 #Decorador 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", articles=data['articles'])
 
 dic_comados = {
     "awk": "Lenguaje de búsqueda y procesamiento de patrones.",
@@ -202,7 +202,22 @@ def form_feedback():
 def page_api():
     return render_template("api.html")
 
+@app.route("/api-ejercicios")
+def page_api_ejercicios():
+    return render_template("api-ejercicios.html")
 
+
+@app.route("/bases-de-datos")
+def page_bbdd():
+    return render_template("bases-de-datos.html")
+
+@app.route("/instrucciones-de-tabla-y-de-datos")
+def page_bbdd_instrucciones():
+    return render_template("bbdd-instrucciones.html")
+
+@app.route("/bases-de-datos-ejercicios")
+def page_bbdd_ejercicios():
+    return render_template("bbdd-ejercicios.html")
 
 @app.errorhandler(404)
 def page_not_found(e):

@@ -62,10 +62,9 @@ svg {
 }
 
 .icon-expand {
-    width: 30px;
-    height: auto;
-    margin-right: 10px;
+    margin-left: 10px;
     cursor: pointer;
+    font-size: 2rem;
 }
 
 .icon-expand:hover {
@@ -281,7 +280,7 @@ footer {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    background-color: rgb(3, 19, 38);
+    background-color: rgb(23, 43, 54);
     top: 0;
     right: 0;
     bottom: 0;
@@ -296,7 +295,7 @@ footer {
   .nav-list {
     flex-direction: column;
     align-items: center;
-    background-color: rgb(22, 31, 43);
+    background-color: rgb(23, 43, 54);
     text-align: center;
     padding: 1rem;
   }
