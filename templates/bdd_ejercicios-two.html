@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Ejercicio de BBDD{% endblock %}
+
+
+{% block main %}
+<h1>Ejercicio:</h1>
+    <h2>Productos (Creación)</h2>
+    <p>Crear una tabla de productos que contenga la siguiente información:</p>
+    <ul>
+        <li>ID del producto</li>
+        <ul>
+            <li>Debe ser clave primaria</li>
+            <li>Debe ser autoincremental</li>
+        </ul>
+        <li>Nombre del producto</li>
+        <li>Precio del producto</li>
+        <li>Fecha de creación</li>
+        <li>Fecha de modificación (acepta nulos)</li>
+    </ul>
+    <h2>Productos (Inserción)</h2>
+    <p>Insertar en la tabla de productos los siguientes datos:</p>
+    <img src="{{ url_for('static', filename='/images/images-clases/table-ejercices.png')}}" alt="">
+{% endblock %}

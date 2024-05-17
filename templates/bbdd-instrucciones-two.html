@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Instrucciones de datos{% endblock %}
+
+
+{% block main %}
+<h1>Instrucciones de Datos</h1>
+    
+    <h2>INSERT:</h2>
+    <script src="https://gist.github.com/guillsil/2ac730568508e4392fbbad1281ce30f7.js"></script>
+    
+    <h2>UPDATE:</h2>
+    <script src="https://gist.github.com/guillsil/67c1ee097d57f57a8585fdbde490d9a7.js"></script>
+    
+    <h2>DELETE:</h2>
+    <p>DELETE FROM table_name<br>
+    WHERE some_condition;</p>
+    
+    <h2>Incrementación Automática: AUTO_INCREMENT</h2>
+    <p>¿Qué es?</p>
+    <ul>
+        <li>Atributo que se puede aplicar a una columna numérica (generalmente una clave primaria) en una tabla</li>
+        <li>Cuando se establece esta propiedad, MySQL automáticamente asigna valores secuenciales a esa columna para cada nueva fila insertada</li>
+        <li>No es necesario especificar explícitamente un valor para esta columna al insertar un nuevo registro → MySQL se encargará de asignar automáticamente el siguiente número disponible</li>
+    </ul>
+    <p>En resumen…</p>
+    <ul>
+        <li>Cada valor asignado por AUTO_INCREMENT es único dentro de esa columna</li>
+        <li>Los valores se generan en orden secuencial (1, 2, 3, ...)</li>
+        <li>Se usa comúnmente en columnas que actúan como claves primarias para garantizar la unicidad y facilidad de referencia</li>
+    </ul>
+    
+    <h3>¿Cómo asignamos este atributo?</h3>
+    <script src="https://gist.github.com/guillsil/2e2f36f36f6f1f02a460fe9efc9291a7.js"></script>
+    
+    <h3>¿Cómo lo utilizamos?</h3>
+    <p>INSERT INTO productos<br>
+    (producto, precio)<br>
+    VALUES<br>
+    (‘yerba’, 9000);</p>
+    
+    <h2>Claves Primarias: Primary Keys</h2>
+    <p>¿Qué es?</p>
+    <ul>
+        <li>Campo (o conjunto de campos) en una tabla que identifica de manera única cada fila en esa tabla</li>
+        <li>Concepto fundamental para garantizar la integridad de los datos y facilitar las relaciones entre tablas</li>
+    </ul>
+    <p>Características</p>
+    <ul>
+        <li>Cada valor en la clave primaria debe ser único dentro de la tabla</li>
+        <li>Los valores de la clave primaria no pueden ser nulos (NULL) porque deben identificar de manera única cada fila</li>
+        <li>Generalmente tiene asociado un índice que mejora el rendimiento en búsquedas y consultas</li>
+    </ul>
+    
+    <h3>¿Cómo identificamos una PK?</h3>
+    <script src="https://gist.github.com/guillsil/04ebb83e95c18e96f625511f14f3c263.js"></script>
+{% endblock %}

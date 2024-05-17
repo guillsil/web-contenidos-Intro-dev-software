@@ -234,6 +234,20 @@ articles = [
             }
             
         ]
+    },
+    {
+        "title": "Clase 16: Bases de Datos II",
+        "links": [
+            {
+                "title": "Estructuras de Datos: Insert , Delete, Update, etc",
+                "page_name": "page_bbdd_instrucciones_two"
+            },
+            {
+                "title": "Ejercicio de BBDD: Creación y modificacion de tablas",
+                "page_name": "page_bbdd_ejercicios_two"
+            },
+            
+        ]
     }
 ]
 

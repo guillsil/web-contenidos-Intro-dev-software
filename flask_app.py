@@ -219,6 +219,14 @@ def page_bbdd_instrucciones():
 def page_bbdd_ejercicios():
     return render_template("bbdd-ejercicios.html")
 
+@app.route("/instrucciones-de-datos")
+def page_bbdd_instrucciones_two():
+    return render_template("bbdd-instrucciones-two.html")
+
+@app.route("/bases-de-datos-ejercicios-two")
+def page_bbdd_ejercicios_two():
+    return render_template("bdd_ejercicios-two.html")
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
