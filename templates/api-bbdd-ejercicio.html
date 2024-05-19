@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}API: Integracion con una base de datos {% endblock %}
+
+
+{% block main %}
+<h1>API integracion con una base de datos en Flask</h1>
+    <p>Esta API es un servicio web construido con Flask, un framework de Python para crear aplicaciones web. La API proporciona endpoints para realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) en una base de datos MySQL.</p>
+    
+    <h2>Descripción de los endpoints disponibles:</h2>
+    
+    <ol>
+        <li>
+            <code>/users</code> (método GET): Este endpoint devuelve todos los usuarios almacenados en la base de datos. Realiza una consulta SELECT a la tabla "users" y devuelve los resultados en formato JSON.
+        </li>
+        <li>
+            <code>/create_user</code> (método POST): Este endpoint permite crear un nuevo usuario en la base de datos. Recibe los datos del usuario (nombre y correo electrónico) en el cuerpo de la solicitud en formato JSON. Luego, ejecuta una consulta INSERT en la tabla "users" para agregar el nuevo usuario.
+        </li>
+        <li>
+            <code>/users/&lt;id&gt;</code> (método PATCH): Este endpoint permite actualizar un usuario existente en la base de datos. Recibe el ID del usuario a actualizar como parte de la URL y los nuevos datos del usuario en el cuerpo de la solicitud en formato JSON. Luego, ejecuta una consulta UPDATE en la tabla "users" para modificar los datos del usuario correspondiente al ID proporcionado.
+        </li>
+        <li>
+            <code>/users/&lt;id&gt;</code> (método GET): Este endpoint devuelve los detalles de un usuario específico en la base de datos. Recibe el ID del usuario como parte de la URL y realiza una consulta SELECT en la tabla "users" para obtener los datos del usuario correspondiente al ID proporcionado.
+        </li>
+        <li>
+            <code>/users/&lt;id&gt;</code> (método DELETE): Este endpoint permite eliminar un usuario existente de la base de datos. Recibe el ID del usuario a eliminar como parte de la URL. Primero, realiza una consulta SELECT para verificar si el usuario existe. Si el usuario existe, ejecuta una consulta DELETE en la tabla "users" para eliminar el usuario correspondiente al ID proporcionado.
+        </li>
+    </ol>
+    
+    <p>En resumen, esta API proporciona una interfaz para interactuar con una base de datos MySQL y realizar operaciones CRUD en la tabla "users".</p>
+{% endblock %}

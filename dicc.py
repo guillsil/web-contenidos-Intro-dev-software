@@ -248,6 +248,15 @@ articles = [
             },
             
         ]
+    },
+    {
+        "title": "Clase 17: Integracion de una Base de datos con un API en Flask",
+        "links": [
+            {
+                "title": "API con interfaz para interactuar con una base de datos MySql y realizar operaciones CRUD eN LA TABLA DE USER",
+                "page_name": "page_api_bbdd"
+            }
+        ]
     }
 ]
 
