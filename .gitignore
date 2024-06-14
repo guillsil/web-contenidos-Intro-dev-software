@@ -1,3 +1,3 @@
-./venv
-.subir.sh
-.preparar-venv.sh
+./venv/
+.subir
+.preparar-venv
