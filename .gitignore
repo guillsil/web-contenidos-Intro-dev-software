@@ -1,3 +1,9 @@
-./venv/
-.subir
-.preparar-venv
+# Ignorar el directorio .venv
+.venv/
+
+# Ignorar el directorio __pycache__
+__pycache__/
+
+# Ignorar los archivos de script .sh
+preparar-venv.sh
+subir.sh
