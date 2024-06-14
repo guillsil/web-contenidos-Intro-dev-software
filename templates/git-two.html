@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}GitHUb Segunda Parte{% endblock %}
+
+
+{% block main %}
+<h1>¿Qué es una branch?</h1>
+<ul>
+    <li>Una branch (rama) es una línea de desarrollo independiente.</li>
+    <li>Permite trabajar en diferentes características o correcciones de bugs de manera aislada.</li>
+    <li>git checkout &lt;nombre_de_la_rama&gt;: Cambia a la rama especificada.</li>
+    <li>git switch &lt;nombre_de_la_rama&gt;: Cambia a la rama especificada (más moderno y seguro).</li>
+</ul>
+
+<h2>checkout</h2>
+<p>Un comando versátil utilizado para cambiar de rama o restaurar archivos en tu directorio de trabajo.</p>
+<p>Permite navegar entre ramas, crear nuevas ramas, y revertir archivos o commits específicos.</p>
+
+<h2>Blame y Cherry-Pick</h2>
+<p>git blame: Muestra la última modificación de cada línea en un archivo.</p>
+<p>Uso Común: Identificar quién hizo un cambio específico y cuándo.</p>
+<p>git cherry-pick: Aplica los cambios de un commit específico a la rama actual.</p>
+
+<h2>Bisect</h2>
+<ul>
+    <li>git bisect start: inicia el proceso</li>
+    <li>git bisect bad &lt;commit_malo&gt;: marca un commit como malo</li>
+    <li>git bisect good &lt;commit_bueno&gt;: marca un commit como bueno</li>
+</ul>
+
+<h2>Readme.md</h2>
+<p>Es un archivo de texto (generalmente en formato Markdown) ubicado en la raíz del proyecto.</p>
+<ul>
+    <li>Introducción al Proyecto: Explica qué es el proyecto, su propósito y objetivos.</li>
+    <li>Instrucciones de Instalación: Guía sobre cómo instalar y configurar el proyecto.</li>
+    <li>Uso del Proyecto: Proporciona ejemplos y detalles sobre cómo usar la aplicación o librería.</li>
+    <li>Licencia: Información sobre la licencia bajo la cual se distribuye el proyecto.</li>
+</ul>
+
+<h2>pre-commit</h2>
+<h3>Configuración Básica:</h3>
+<ul>
+    <li>Instalación: pip install pre-commit</li>
+    <li>Crear un archivo .pre-commit-config.yaml y definir hooks.</li>
+    <li>Instalar hooks en el repositorio: pre-commit install</li>
+</ul>
+<h3>Propósito:</h3>
+<ul>
+    <li>Asegurar que el código cumpla con los estándares definidos.</li>
+    <li>Prevenir errores comunes al aplicar verificaciones automáticas.</li>
+</ul>
+
+<h2>hooks</h2>
+<p>Scripts que se ejecutan automáticamente en momentos específicos del ciclo de vida de Git.</p>
+<p>Se utilizan para automatizar tareas, verificar condiciones antes de hacer commit, push, entre otras.</p>
+
+{% endblock %}

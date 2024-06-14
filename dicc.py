@@ -257,7 +257,50 @@ articles = [
                 "page_name": "page_api_bbdd"
             }
         ]
+    },
+    {
+        "title": "Clase 18: Introduccion a Git",
+        "links": [
+            {
+                "title": "Sistema de control de versiones que permite rastrear y gestionar cambios en archivos y proyectos de software.",
+                "page_name": "page_git"
+            }
+        ]
+    },
+    {
+        "title": "Clase 19: Git Segunda Parte",
+        "links": [
+            {
+                "title": "Git, branch, Checkout, Blame, Cherry Pick, Bisect, README",
+                "page_name": "page_git_two"
+            }
+        ]
+    },
+    {
+        "title": "Clase 20: Introduccion a Docker",
+        "links": [
+            {
+                "title": "¿Qué es Docker?, Comandos ",
+                "page_name": "page_docker"
+            }
+        ]
     }
 ]
 
 data = {"articles": articles}
+dic_comados = {
+    "awk": "Lenguaje de búsqueda y procesamiento de patrones.",
+    "cat": "Muestra el contenido de uno o varios archivos.",
+    "cut": "Extrae campos seleccionados de cada línea de un archivo.",
+    "diff": "Compara dos archivos línea por línea.",
+    "grep": "Busca patrones en un archivo.",
+    "head": "Muestra las primeras líneas de un archivo.",
+    "less": "Permite visualizar un archivo de texto.",
+    "sed": "Editor de secuencias (especialmente para buscar y reemplazar).",
+    "sort": "Ordena las líneas de un archivo.",
+    "split": "Divide un archivo en partes más pequeñas.",
+    "tr": "Traduce o elimina caracteres.",
+    "uniq": "Encuentra líneas duplicadas en un archivo.",
+    "wc": "Cuenta líneas, palabras y caracteres en un archivo.",
+    "touch": "Crea un archivo vacío.",
+}

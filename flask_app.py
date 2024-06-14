@@ -1,30 +1,21 @@
 from flask import Flask, render_template, request, redirect, url_for
 import json
-from dicc import data
+from sqlalchemy import create_engine, text
+from sqlalchemy.exc import SQLAlchemyError
+
+from dicc import data, dic_comados
 
 app = Flask(__name__)
+
+# Configuración de la conexión a la base de datos
+engine = create_engine('mysql+pymysql://root:admin@localhost/db')
 
 #Decorador 
 @app.route("/")
 def index():
     return render_template("index.html", articles=data['articles'])
 
-dic_comados = {
-    "awk": "Lenguaje de búsqueda y procesamiento de patrones.",
-    "cat": "Muestra el contenido de uno o varios archivos.",
-    "cut": "Extrae campos seleccionados de cada línea de un archivo.",
-    "diff": "Compara dos archivos línea por línea.",
-    "grep": "Busca patrones en un archivo.",
-    "head": "Muestra las primeras líneas de un archivo.",
-    "less": "Permite visualizar un archivo de texto.",
-    "sed": "Editor de secuencias (especialmente para buscar y reemplazar).",
-    "sort": "Ordena las líneas de un archivo.",
-    "split": "Divide un archivo en partes más pequeñas.",
-    "tr": "Traduce o elimina caracteres.",
-    "uniq": "Encuentra líneas duplicadas en un archivo.",
-    "wc": "Cuenta líneas, palabras y caracteres en un archivo.",
-    "touch": "Crea un archivo vacío.",
-}
+
 @app.route("/procesamiento-de-archivos-en-bash")
 def page_procesamiento_de_archivos():
     return render_template("procesamiento.html", dic_comados=dic_comados)
@@ -185,18 +176,25 @@ def page_contacto():
     return render_template("contacto.html")
 
 
-@app.route("/form_feedback", methods=['GET', 'POST'])
+@app.route("/form_feedback", methods=['POST'])
 def form_feedback():
-    if request.method == 'POST':
-        name = request.form.get('name', '')
-        lastname = request.form.get('lastname', '')
-        mail = request.form.get('email', '')
-        message = request.form.get('feedback', '')
-        if name and lastname and mail and message: 
+    name = request.form.get('name', '')
+    lastname = request.form.get('lastname', '')
+    mail = request.form.get('email', '')
+    message = request.form.get('feedback', '')
+
+    if name and lastname and mail and message:
+        query = text("INSERT INTO feedback (name, lastname, email, feedback) VALUES (:name, :lastname, :email, :feedback)")
+
+        try:
+            with engine.connect() as conn:
+                conn.execute(query, {"name": name, "lastname": lastname, "email": mail, "feedback": message})
+                conn.commit()
             return render_template('gracias.html', name=name, lastname=lastname)
-        else:
+        except SQLAlchemyError as err:
+            print(f"Error: {err}")
             return render_template('404.html')
-    return render_template('404.html')
+
 
 @app.route("/api")
 def page_api():
@@ -230,6 +228,21 @@ def page_bbdd_ejercicios_two():
 @app.route("/api-bbdd-ejercicio")
 def page_api_bbdd():
     return render_template("api-bbdd-ejercicio.html")
+
+@app.route("/git")
+def page_git():
+    return render_template("git.html")
+
+
+@app.route("/git-segunda-parte")
+def page_git_two():
+    return render_template("git-two.html")
+
+@app.route("/docker")
+def page_docker():
+    return render_template("docker.html")
+
+
 
 @app.errorhandler(404)
 def page_not_found(e):

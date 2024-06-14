@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block title %}Docker{% endblock %}
+
+
+{% block main %}
+<h1>Docker</h1>
+<h2>¿Qué es Docker?</h2>
+<p>Docker es una herramienta utilizada para la virtualización de Sistemas Operativos. Utilizado para el desarrollo, ejecución y entrega de software.</p>
+
+<h2>¿Para qué se utiliza Docker?</h2>
+<ul>
+    <li>Solventar problemas de aplicaciones corriendo en distintos sistemas operativos</li>
+    <li>La entrega y despliegue de aplicaciones</li>
+    <li>Compartir el trabajo con otros desarrolladores</li>
+    <li>Crear ambientes de desarrollo con las herramientas justas y necesarias</li>
+</ul>
+
+<h2>¿Qué es un Contenedor?</h2>
+<p>Son ligeros “paquetes” de software que incluyen todo lo necesario para que uno de los componentes de tu aplicación se ejecute individualmente.</p>
+
+<h2>Cómo crear contenedores con Docker</h2>
+<p>Para crear contenedores, necesitamos conocer dos cosas:</p>
+<ul>
+    <li>Docker files</li>
+    <li>Docker images</li>
+</ul>
+
+<h2>¿Qué es un Dockerfile?</h2>
+<p>Es un archivo donde tenemos un escribimos un set de instrucciones para crear una imagen de Docker.</p>
+<img src="{{ url_for('static', filename='/images/images-clases/dockerfile.png')}}" alt="">
+
+<h2>¿Qué es una Imagen?</h2>
+<p>Las imágenes son utilizadas como plantillas para crear contenedores de Docker. Contienen TODA la información necesaria para crear un contenedor.</p>
+<img src="{{ url_for('static', filename='/images/images-clases/dockerImagenes.png')}}" alt="">
+
+<h2>Contenedores vs Virtual Machines</h2>
+<img src="{{ url_for('static', filename='/images/images-clases/docker.png')}}" alt="">
+
+<h2>DockerHub</h2>
+<p>Es el repositorio remoto donde guardamos nuestras imágenes para compartirlas con nuestro equipo o con el mundo de desarrolladores. Ustedes también pueden subir sus propias imágenes de sus aplicaciones. También es del lugar donde descargan las imágenes de distintos sistemas operativos, bases de datos, gestores de bases de datos, lenguajes de programación, aplicaciones de monitoreo, etc.</p>
+<p>Link a DockerHub: <a href="https://hub.docker.com/">https://hub.docker.com/</a></p>
+
+<h2>Comandos</h2>
+
+<h3>docker pull:</h3>
+<p>Este comando nos permite descargar imágenes desde DockerHub</p>
+<ul>
+    <li><code>docker pull ubuntu</code> (Hace default a la última versión)</li>
+    <li><code>docker pull ubuntu:jammy</code> (Colocamos un tag para descargar una versión en particular)</li>
+</ul>
+
+<h3>docker images:</h3>
+<p>Es un alias para el comando docker image list, nos permite listar todas las imágenes dentro de nuestro repositorio local</p>
+<ul>
+    <li><code>docker images</code> (Lista todas las imágenes)</li>
+    <li><code>docker image ubuntu</code> (Lista todas las imágenes qué matcheen el tag ubuntu)</li>
+</ul>
+
+<h3>docker run:</h3>
+<p>Este comando nos permite crear un contenedor basado en una imagen</p>
+<ul>
+    <li><code>docker run –name ubuntu_test ubuntu</code> (Creamos el contenedor pero no va a funcionar)</li>
+    <li>Necesitamos de unos flags para hacerlo</li>
+    <li><code>docker run -d -i -t –name ubuntu_test</code> (--detach, –interactive, –tty)</li>
+    <li>Hay muchas más opciones de configuración, las pueden ver en</li>
+</ul>
+
+<h3>docker exec:</h3>
+<p>Este comando nos permite ejecutar comandos dentro de un contenedor que ya esté ejecutándose</p>
+<ul>
+    <li><code>docker exec -it “bin/bash” ubuntu_test</code> (Nos permite utilizar la consola del contenedor de ubuntu)</li>
+</ul>
+
+<h3>docker ps:</h3>
+<p>Nos permite listar los contenedores que están ejecutándose.</p>
+<ul>
+    <li><code>docker ps</code> (Lista solo contenedores ejecutándose)</li>
+    <li><code>docker ps -a</code> (Lista también los contenedores apagados)</li>
+</ul>
+
+<h3>docker stop</h3>
+<p>Nos permite detener la ejecución de un contenedor</p>
+<ul>
+    <li><code>docker stop ubuntu_test</code> (También puede ser el id del contenedor)</li>
+</ul>
+
+<h3>docker rm y docker rmi</h3>
+<p>Nos permite eliminar contenedores e imágenes que ya no necesitemos</p>
+<ul>
+    <li><code>docker rm ubuntu_test</code></li>
+    <li><code>docker rmi ubuntu</code></li>
+    <li><code>docker rmi -f $(docker images -aq)</code> (Borra todas las imágenes)</li>
+</ul>
+{% endblock %}

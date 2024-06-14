@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Git{% endblock %}
+
+
+{% block main %}
+<h1>¿Qué es Git?</h1>
+    <ul>
+        <li>Git es un sistema de control de versiones distribuido, diseñado para manejar desde proyectos pequeños hasta proyectos enormes con rapidez y eficiencia.</li>
+        <li>Surgió en 2005 gracias a Linus Torvalds para gestionar el desarrollo del kernel de Linux.</li>
+        <li>Proporciona un historial detallado de cambios en el código, facilitando la colaboración entre desarrolladores y permitiendo el seguimiento de las modificaciones a lo largo del tiempo.</li>
+    </ul>
+
+    <h1>¿Para qué sirve?</h1>
+    <ul>
+        <li>Git es esencial en el desarrollo de software, ya que permite la colaboración efectiva, la gestión de versiones y la ramificación del código.</li>
+        <li>Entre sus alternativas, se encuentran sistemas como Subversion (SVN) y Mercurial, que aunque ofrecen funcionalidades similares, difieren en su enfoque y uso. Sin embargo, Git es ampliamente preferido por su velocidad y flexibilidad.</li>
+    </ul>
+
+    <h1>Conceptos básicos</h1>
+    <ul>
+        <li>Repositorio: conjunto de archivos</li>
+        <li>Rama/Branch: línea de trabajo</li>
+        <li>Commit: instantánea de un conjunto de cambios</li>
+        <li>Archivo: archivo</li>
+    </ul>
+
+    <h1>Comandos básicos de Git:</h1>
+    <ul>
+        <li><code>init</code>: Inicializa un nuevo repositorio Git en el directorio de trabajo actual.</li>
+        <li><code>add</code>: Agrega archivos cambiados al área de preparación.</li>
+        <li><code>status</code>: Muestra el estado actual del repositorio.</li>
+        <li><code>commit</code>: Registra los cambios almacenados en el área de preparación en el repositorio.</li>
+        <li><code>log</code>: Muestra el historial de confirmaciones del repositorio.</li>
+    </ul>
+
+    <h1>¿Qué es GitHub?</h1>
+    <ul>
+        <li>GitHub es una plataforma de alojamiento de código fuente basada en la nube que permite a los desarrolladores:</li>
+        <li>Alojar y compartir proyectos de código fuente.</li>
+        <li>Realizar un seguimiento de los cambios en el código mediante el control de versiones.</li>
+        <li>Colaborar con otros desarrolladores en proyectos.</li>
+        <li>Descubrir nuevos proyectos de código fuente.</li>
+    </ul>
+
+    <h1>Comandos adicionales de Git:</h1>
+    <ul>
+        <li><code>clone</code>: Crea una copia completa del repositorio remoto en su computadora local.</li>
+        <li><code>fetch</code>: Descarga los cambios del repositorio remoto al repositorio local.</li>
+        <li><code>push</code>: Envía los cambios locales al repositorio remoto.</li>
+        <li><code>pull</code>: Obtiene los últimos cambios del repositorio remoto y los fusiona en su repositorio local.</li>
+        <li><code>merge</code>: Se utiliza para combinar dos o más historiales de confirmaciones en un solo historial.</li>
+    </ul>
+
+    <h1>Conflictos</h1>
+    <p>Los conflictos de Git se producen cuando dos personas están trabajando en los mismos archivos y realizan cambios en las mismas líneas de código. Cuando intenta fusionar los cambios de las dos ramas, Git no puede combinar automáticamente los cambios y se produce un conflicto. Deberá resolver el conflicto manualmente editando los archivos y decidiendo qué cambios desea conservar.</p>
+
+    <h1>Pull request</h1>
+    <ul>
+        <li>Solicitud de integración de cambios en una rama principal del proyecto.</li>
+        <li>Revisión y discusión de código por parte de otros desarrolladores.</li>
+        <li>Proceso clave en el desarrollo colaborativo.</li>
+        <li>Beneficios:</li>
+        <ul>
+            <li>Revisión de Código: Permite detectar y corregir errores antes de la integración.</li>
+            <li>Colaboración: Fomenta la comunicación y el trabajo en equipo.</li>
+            <li>Documentación: Registra el historial y la justificación de cambios.</li>
+        </ul>
+    </ul>
+{% endblock %}
