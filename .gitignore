@@ -1,5 +1,6 @@
 # Ignorar el directorio .venv
 .venv/
+./idea/
 
 # Ignorar el directorio __pycache__
 __pycache__/

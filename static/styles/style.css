@@ -182,6 +182,14 @@ form {
   border-radius: 20px;
 }
 
+
+.main-container-two{
+  background-color: rgb(139, 151, 157);
+  padding: 1rem;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
 .datos-person,
 .datos-text {
   margin-bottom: 20px;
@@ -203,8 +211,10 @@ input {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
+  margin-top: 10px;
   border-radius: 5px;
   border: none;
+  border-color: #666666;
 }
 
 button {
@@ -212,8 +222,12 @@ button {
   color: black;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin: 0;
 }
 
 button:hover {
@@ -253,7 +267,7 @@ footer {
 .footer-list a {
   color: rgb(167, 176, 180);
   text-decoration: none;
-  margin-right: 10;
+  margin-right: 10px;
   display: inline-block;
 }
 
@@ -277,10 +291,19 @@ footer {
   header{
     padding: 0 5px;
   }
+  .main-container {
+    background-color: rgb(139, 151, 157);
+    padding: 1rem;
+  }
   .main-container-two {
     background-color: rgb(139, 151, 157);
-    padding: 3rem;
-}
+    padding: 0.7rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .btn-feedback{
+    margin: 0 40%;
+  }
   .main-container article h2 {
     font-size: 20px;
   }

@@ -284,6 +284,19 @@ articles = [
                 "page_name": "page_docker"
             }
         ]
+    },
+    {
+        "title": "Trabajo Practico Final",
+        "links": [
+            {
+                "title": "Proyecto Final: Foro The Flaskonauts",
+                "page_name": "page_flaskonautas"
+            },
+            {
+                "title": "Foro: The Flaskonauts: Repo en Github",
+                "page_name": "page_repo_flaskonautas"
+            }
+        ]
     }
 ]
 

@@ -1,14 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for
 import json
-from sqlalchemy import create_engine, text
-from sqlalchemy.exc import SQLAlchemyError
+
 
 from dicc import data, dic_comados
 
 app = Flask(__name__)
-
-# Configuración de la conexión a la base de datos
-engine = create_engine('mysql+pymysql://root:admin@localhost/db')
 
 #Decorador 
 @app.route("/")
@@ -167,14 +163,13 @@ def page_parcial_resuelto():
 def page_feedback():
     return render_template("feedback.html")
 
-@app.route("/soy")
-def page_soy():
-    return render_template("soy.html")
+@app.route("/flaskonautas")
+def page_flaskonautas():
+    return redirect("https://flaskonautasclient.pythonanywhere.com/")
 
-@app.route("/contacto")
-def page_contacto():
-    return render_template("contacto.html")
-
+@app.route("/flaskonautas-repo")
+def page_repo_flaskonautas():
+    return redirect("https://github.com/TarabayIvan/tp-introds-flaskonautas")
 
 @app.route("/form_feedback", methods=['POST'])
 def form_feedback():
@@ -182,18 +177,9 @@ def form_feedback():
     lastname = request.form.get('lastname', '')
     mail = request.form.get('email', '')
     message = request.form.get('feedback', '')
-
-    if name and lastname and mail and message:
-        query = text("INSERT INTO feedback (name, lastname, email, feedback) VALUES (:name, :lastname, :email, :feedback)")
-
-        try:
-            with engine.connect() as conn:
-                conn.execute(query, {"name": name, "lastname": lastname, "email": mail, "feedback": message})
-                conn.commit()
-            return render_template('gracias.html', name=name, lastname=lastname)
-        except SQLAlchemyError as err:
-            print(f"Error: {err}")
-            return render_template('404.html')
+    if not name or not lastname or not mail or not message:
+        return redirect(url_for('page_feedback'))
+    return render_template('gracias.html', name=name, lastname=lastname, mail=mail, message=message)
 
 
 @app.route("/api")

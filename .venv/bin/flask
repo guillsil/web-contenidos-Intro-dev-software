@@ -1,4 +1,4 @@
-#!/home/elliug/Documents/curso2024/Cursada-Intro/web-contenidos-Intro-dev-software/.venv/bin/python3
+#!/home/elliug/Documents/web-contenidos-Intro-dev-software/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
